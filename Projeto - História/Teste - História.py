@@ -38,9 +38,7 @@ print(f"""{'|':<0} {'Bem-Vindo(a) ao [NOME DO JOGO]':^60} {'|'}
 {'|':<0} {'':^60} {'|'}
 {'|':<0} {'Selecione uma classe para começar a jornada!':^60} {'|'}
 {'|':<0} {f'{superior}':^60} {'|'}
-{'|':<0} {f'{tabela_guerreiro}':^60} {'|'}
-{'|':<0} {f'{tabela_elfo}':^60} {'|'}
-{'|':<0} {f'{tabela_mago}':^60} {'|'}
+{'|':<0} {f'{}':^60} {'|'}
 {'|':<0} {'1.Guerreiro  2.Elfo  3.Mago':^60} {'|'}""")
 txt("=-" * 32)
 escolha.append(int(input("Qual classe deseja? ")))
