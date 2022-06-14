@@ -19,8 +19,8 @@ opcoes = int(input(f'''
 Escolha o que você vai fazer: '''))
 
 if opcoes == 1:
-    controle = input('Você quer jogar o dado para atacar ou voltar? ')
-    if controle == 'atacar':
+    controle = input('Se você quiser jogar o dado para atacar digite (1), se quiser voltar digite (2): ')
+    if controle == 1:
         print('O dado foi jogado...')
         time.sleep(1)
         numtirado = dado()
