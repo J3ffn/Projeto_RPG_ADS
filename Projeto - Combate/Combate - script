@@ -1,0 +1,32 @@
+Idéias:
+Contador de rodadas
+Contador para limitar certas habilidades por determinada quantidade de turnos
+
+Ataque normal no dado:
+1- Dá um golpe crítico
+2- Dá um golpe normal com dano normal
+3- Dá um golpe normal com dano normal
+4- Dá um golpe com o dano pela metade
+5- Erra o golpe
+6- Erra o golpe e se acerta causando o próprio dano pela metade em si
+mesmo
+
+Habilidades:
+Arqueiro – Chuva de Flechas, Flecha da Fé e Agilidade (Especial)
+Guerreiro – Corte vertical, Espada sagrada, e Fúria (Especial)
+Mago – Bola de fogo, Chuva de Veneno e Cura (Especial)
+
+Sistema de Defesa, itens e fugir de batalha:
+
+Defesa
+1- Defende e ainda acerta um golpe com um dano pela metade
+2- Defende
+3- Defende
+4- Defende, mas se fere um pouco
+5- Defende, mas se fere um pouco
+6- Não se defendeItens (Se tiver)
+
+Poção pequena – Cura 20% da vida
+Poção média – Cura 40% da vida
+Poção grande – Cura 60% da vida
+Bomba de fumaça – Ganha dois turnos com nenhum acerto do oponente
