@@ -1,12 +1,22 @@
 # by Jefferson.
-from prettytable import prettytable
+from prettytable import PrettyTable
 ####
 import time
 import random
 
 personagens = ["Guerreiro", "Arqueiro", "Mago"]
+escolha = []
+lista = [0, 0, 0]  # [HP, Força, Mana]
 
-lista = [0, 0, 0]  # [HP, Força, XP]
+
+def dado():
+    x = random.randint(1, 6)
+    return x
+
+'''numero = 0
+for i in range(1):
+    numero = dado()
+    print(numero)'''
 
 
 def txt(texto):
@@ -17,31 +27,29 @@ def txt(texto):
         print()
 
 
-'''txt("=-" * 32)
+table = PrettyTable()
+superior = table.field_names = ['Classe', 'Vida', 'Força', 'Mana']
+tabela_guerreiro = table.add_row(["Guerreiro", 100, 110, 90])
+tabela_elfo = table.add_row(["Elfo", 110, 90, 100])
+tabela_mago = table.add_row(["Mago", 90, 100, 110])
+
+txt("=-" * 32)
 print(f"""{'|':<0} {'Bem-Vindo(a) ao [NOME DO JOGO]':^60} {'|'}
 {'|':<0} {'':^60} {'|'}
 {'|':<0} {'Selecione uma classe para começar a jornada!':^60} {'|'}
-{'|':<0} {'':^60} {'|'}
+{'|':<0} {f'{superior}':^60} {'|'}
+{'|':<0} {f'{tabela_guerreiro}':^60} {'|'}
+{'|':<0} {f'{tabela_elfo}':^60} {'|'}
+{'|':<0} {f'{tabela_mago}':^60} {'|'}
 {'|':<0} {'1.Guerreiro  2.Elfo  3.Mago':^60} {'|'}""")
 txt("=-" * 32)
-'''
-
-'''table = prettytable()
-
-table.field_names = ['name', 'age', 'city']
-table.add_row(["alice", 20, "adelaide"])
-table.add_row(["bob", 20, "brisbane"])
-table.add_row(["chris", 20, "cairns"])
-table.add_row(["david", 20, "sydney"])
-table.add_row(["ella", 20, "melbourne"])'''
-
-def dado():
-    x = random.randint(1, 6)
-    return x
+escolha.append(int(input("Qual classe deseja? ")))
 
 
-numero = 0
-for i in range(1):
-    numero = dado()
-    print(numero)
+table.field_names = ['Classe', 'Vida', 'Força', 'Mana']
+table.add_row(["Guerreiro", 100, 110, 90])
+table.add_row(["Elfo", 110, 90, 100])
+table.add_row(["Mago", 90, 100, 110])
+
+print(table)
 
