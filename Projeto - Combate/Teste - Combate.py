@@ -12,8 +12,7 @@ opcoes = 0
 print('Um inimigo veio em sua direção, se prepare para seu primeiro combate!')
 while inimigo1[0] != 0 and inimigo1[0] > 0:
     atributosbatalha = atributos[:]
-    while not 0 > opcoes < 6:
-        opcoes = int(input(f'''
+    opcoes = int(input(f'''
         1-> Ataque base     2-> Habilidades          3-> Defesa  
     
         4-> Itens           5-> Dados do inimigo     6-> Pular rodada
@@ -41,6 +40,9 @@ Escolha o que você vai fazer: '''))
             elif numtirado == 6:
                 atributosbatalha[0] -= atributos[1] * 0.25
                 print(f'Você errou o golpe e se machucou causando {atributos[1] * 0.25} em si mesmo')
-
+        elif controle == 2:
+            continue
+    elif opcoes == 2:
+        print('Escolha uma de suas habilidades: ')
 
 
