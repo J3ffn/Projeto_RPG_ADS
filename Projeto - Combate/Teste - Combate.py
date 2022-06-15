@@ -46,3 +46,4 @@ Escolha o que você vai fazer: '''))
         print('Escolha uma de suas habilidades: ')
 
 
+print('Teste para ver se ta funcionando aqui')
