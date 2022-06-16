@@ -8,9 +8,10 @@ def dado():
 atributos = [90, 100, 110]
 inimigo1 = [50, 100, 0]
 opcoes = 0
+atributosbatalha = atributos[:]
 
 print('Um inimigo veio em sua direção, se prepare para seu primeiro combate!')
-while inimigo1[0] != 0 and inimigo1[0] > 0:
+while inimigo1[0] > 0 or atributosbatalha[0] > 0:
     atributosbatalha = atributos[:]
     opcoes = int(input(f'''
         1-> Ataque base     2-> Habilidades          3-> Defesa  
@@ -29,7 +30,7 @@ Escolha o que você vai fazer: '''))
             if numtirado == 1:
                 inimigo1[0] -= atributos[1] * 0.70
                 print(f'Você causou {atributos[1] * 0.70} de dano no seu inimigo!')
-            elif 2 == numtirado == 3:
+            elif numtirado == 3 or numtirado == 2:
                 inimigo1[0] -= atributos[1] * 0.50
                 print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
             elif numtirado == 4:
@@ -43,7 +44,32 @@ Escolha o que você vai fazer: '''))
         elif controle == 2:
             continue
     elif opcoes == 2:
-        print('Escolha uma de suas habilidades: ')
+        opcoes = int(input(f'''
+        1-> Bola de fogo     2-> Chuva de veneno     3-> Cura
+
+Escolha uma de suas habilidades:'''))
+
+        if opcoes == 1:
+            print('O dado foi jogado...')
+            time.sleep(1)
+            numtirado = dado()
+            print(f'Você jogou o dado e tirou o número {numtirado}!')
+            if numtirado == 1:
+                inimigo1[0] -= atributos[1] * 0.70
+                print(f'Você causou {atributos[1] * 0.70} de dano no seu inimigo!')
+            elif numtirado == 3 or numtirado == 2:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 4:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 5:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
+            elif numtirado == 6:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
 
 
-print('Teste para ver se ta funcionando aqui')
+
+
