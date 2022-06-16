@@ -8,15 +8,15 @@ def dado():
 atributos = [90, 100, 110]
 inimigo1 = [50, 100, 0]
 opcoes = 0
-atributosbatalha = atributos[:]
+atributosbatalha = []
 
 print('Um inimigo veio em sua direção, se prepare para seu primeiro combate!')
-while inimigo1[0] > 0 or atributosbatalha[0] > 0:
+while inimigo1[0] > 0:
     atributosbatalha = atributos[:]
     opcoes = int(input(f'''
         1-> Ataque base     2-> Habilidades          3-> Defesa  
     
-        4-> Itens           5-> Dados do inimigo     6-> Pular rodada
+        4-> Itens           5-> Dados do inimigo     
     
 Escolha o que você vai fazer: '''))
 
@@ -72,7 +72,51 @@ Escolha uma de suas habilidades:'''))
             elif numtirado == 6:
                 inimigo1[0] -= atributos[1] * 0.25
                 print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
-
+        elif opcoes == 2:
+            print('O dado foi jogado...')
+            time.sleep(1)
+            numtirado = dado()
+            print(f'Você jogou o dado e tirou o número {numtirado}!')
+            if numtirado == 1:
+                inimigo1[0] -= atributos[1] * 0.70
+                print(f'Você causou {atributos[1] * 0.70} de dano no seu inimigo!')
+            elif numtirado == 3 or numtirado == 2:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 4:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 5:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
+            elif numtirado == 6:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
+        elif opcoes == 3:
+            print('O dado foi jogado...')
+            time.sleep(1)
+            numtirado = dado()
+            print(f'Você jogou o dado e tirou o número {numtirado}!')
+            if numtirado == 1:
+                inimigo1[0] -= atributos[1] * 0.70
+                print(f'Você causou {atributos[1] * 0.70} de dano no seu inimigo!')
+            elif numtirado == 3 or numtirado == 2:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 4:
+                inimigo1[0] -= atributos[1] * 0.50
+                print(f'Você causou {atributos[1] * 0.50} de dano no seu inimigo!')
+            elif numtirado == 5:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
+            elif numtirado == 6:
+                inimigo1[0] -= atributos[1] * 0.25
+                print(f'Você causou {atributos[1] * 0.25} de dano no seu inimigo!')
+    elif opcoes == 3:
+        controle = int(input('Se você quiser jogar o dado para se defender digite (1), se quiser voltar digite (2): '))
+        while 1 != controle != 2:
+            controle = int(input("Para jogar o dado digite (1), para voltar digite (2): "))
+        if controle == 1:
 
 
 
