@@ -45,3 +45,5 @@ lista = [0, 0, 0]  # [HP, Força, Mana]
 
 
 quadrado_historia()
+
+print("Olá, Josias!")
