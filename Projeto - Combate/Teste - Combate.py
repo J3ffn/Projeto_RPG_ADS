@@ -1,10 +1,12 @@
-#By Josias
+# By Josias
 import time, random
 
-def dado():
-    return random.randint(1,6)
 
-itens = [['Poção Pequena','Poção Média','Poção Grande'],[4 ,5 ,6]]
+def dado():
+    return random.randint(1, 6)
+
+
+itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'], [4, 5, 6]]
 atributos = [90, 100, 110]
 inimigo1 = [50, 100, 0]
 opcoes = 0

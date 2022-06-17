@@ -2,8 +2,11 @@
 ####################
 import time
 import random
+
 ####################
 
+print("Atenção, pedimos que utilize apenas números para jogar o jogo, obrigado!")
+time.sleep(5)
 ##################################
 ## DADO.
 def dado():
@@ -16,6 +19,7 @@ for i in range(1):
     numero = dado()
     print(numero)'''
 
+
 ## Impressão de texto.
 def txt(texto):
     for i in range(1):
@@ -25,25 +29,43 @@ def txt(texto):
         print()
 
 
-def quadrado_historia(t):
-    txt("=-" * 32)
-    print(f"""{'|':<0} {'Bem-Vindo(a) ao [NOME DO JOGO]':^60} {'|'}
-    {'|'} {'':^60} {'|'}
-    {'|'} {'Selecione uma classe para começar a jornada!':^60} {'|'}
-    {'|'} {f'':^60} {'|'}
-    {'|'} {'1.Guerreiro  2.Elfo  3.Mago':^60} {'|'}
-    {'|'} {'|':^20}{f'':^20}{'|':^20} {'|'}""")
-    txt("=-" * 32)
+def historia(linha_1, linha_2, linha_3, linha_4, linha_5, linha_6):
+    print(f"""
+{f'{linha_1}':^60}
+{f'{linha_2}':^60}
+{f'{linha_3}':^60}
+{f'{linha_4}':^60}
+{f'{linha_5}':^60}
+{f'{linha_6}':^60}""")
     escolha.append(int(input("Qual classe deseja? ")))
 
 
 ##################################
+### Lore dos personagens.
+# - Guerreiro.
+guerreiro = ""
+
+# - Elfa.
+elfa = ""
+
+# - Mago.
+mago = ""
+
+###
 
 personagens = ["Guerreiro", "Arqueiro", "Mago"]
 escolha = []
 lista = [0, 0, 0]  # [HP, Força, Mana]
 
+# Início.
+historia(
+    "Bem-vindo(a) ao [Nome do jogo]",
+    "",
+    "Selecione uma classe para começar a jornada.",
+    "",
+    f"1.{personagens[0]}, 2.{personagens[1]}, 3.{personagens[2]}",
+    f""
+)
 
-quadrado_historia()
 
-print("Olá, Josias!")
+
