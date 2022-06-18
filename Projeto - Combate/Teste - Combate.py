@@ -1,20 +1,32 @@
 import time, random
 
+
 #########Funções#########
 def dado():
     return random.randint(1, 6)
-def vezinimigo():
-    print('O inimigo jogou o dado para se defender!')
+def inimigodef():
+    numtirado = dado()
+    print('MASCARIANE jogou o dado para se defender!')
+    time.sleep(2)
+    print(f'Tirou o número {numtirado}')
+    time.sleep(2)
     if numtirado == 1:
-
-    elif numtirado == 3 or numtirado == 2:
-
+        print('MASCARIANE se desviou do golpe!')
+    elif numtirado == 2:
+        print(f'MASCARIANE recebeu {atributos[1] * 0.75} de dano!!!')
+        inimigo1[0] -= atributos[1] * 0.75
+    elif numtirado == 3:
+        print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
+        inimigo1[0] -= atributos[1] * 0.60
     elif numtirado == 4:
-
-
+        print(f'MASCARIANE recebeu {atributos[1] * 0.90} de dano!!!')
+        inimigo1[0] -= atributos[1] * 0.90
     elif numtirado == 5:
-
+        print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
+        inimigo1[0] -= atributos[1] * 1.00
     elif numtirado == 6:
+        print('MASCARIANE se desviou do golpe!')
+    time.sleep(2)
 
 #########Váriaveis#########
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[0, 0, 0]]
@@ -22,6 +34,7 @@ atributos = [90, 100, 110]
 inimigo1 = [100, 100, 0]
 atributosbatalha = atributos[:]
 opcoes = 0
+
 
 # BATALHA QUE VOU TENTAR TRANSFORMAR EM FUNÇÃO
 while inimigo1[0] > 0:
@@ -42,16 +55,23 @@ Escolha o que você vai fazer: '''))
             numtirado = dado()
             print(f'Você jogou o dado e tirou o número {numtirado}!')
             if numtirado == 1:
-                print('Você errou o golpe!')
+                print(f'Você usou CORTE VERTICAL!')
+                time.sleep(1)
             elif numtirado == 2:
                 print('Você usou CORTE VERTICAL!')
+                time.sleep(1)
             elif numtirado == 3:
                 print('Você usou CORTE VERTICAL!')
+                time.sleep(1)
             elif numtirado == 4:
                 print('Você usou ESPADA SAGRADA!')
+                time.sleep(1)
             elif numtirado == 5:
                 print('Você usou ESPADA SAGRADA!')
+                time.sleep(1)
             elif numtirado == 6:
                 print('Você usou ESPADA SAGRADA!')
+                time.sleep(1)
+            inimigodef()
         elif controle == 2:
             continue
