@@ -99,12 +99,12 @@ print(f"""
 escolha.append(int(input("Escolha: ")))
 if escolha[0] == 1:
     escolha.append(lista[0])
-    txt(f"{guerreiro_historia:<50}")
+    txt(guerreiro_historia)
 
 if escolha[0] == 2:
     escolha.append(lista[1])
-    txt(f"{elfa_historia:^5}")
+    txt(elfa_historia)
 
 if escolha[0] == 3:
     escolha.append(lista[2])
-    txt(f"{mago_historia:^5}")
+    txt(mago_historia)
