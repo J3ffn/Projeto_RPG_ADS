@@ -1,7 +1,6 @@
 # by Jefferson.
 ####################
-import time
-import random
+import time, random
 
 ####################
 
@@ -85,26 +84,65 @@ mago_historia = """"""
 
 ###
 personagens = ["Guerreiro", "Arqueiro", "Mago"]
-escolha = []
+guerreiro_atributos = 100, 0, 90
+elfa_atributos = 110, 90, 100
+mago_atributos = 90, 100, 110
+class_e_atributos = []
+nome_do_jogador = ""
 lista = [0, 0, 0]  # [HP, Força, Mana]
-
+continuar = "s"
 # Início.
-print(f"""
-    Bem-vindo(a) ao [Nome do jogo]
+while continuar != "n":
+    print(f"""
+        Bem-vindo(a) ao [Nome do jogo]
+    
+        Selecione uma classe para começar a jornada.
+    
+        1.{personagens[0]}, 2.{personagens[1]}, 3.{personagens[2]}
+        """)
+    class_e_atributos.append(input("Escolha: "))
+    verificacao = 0
+    while verificacao != 1:
+        while class_e_atributos[0] is not class_e_atributos[0].isnumeric():
+            class_e_atributos.pop()
+            class_e_atributos.append(input("letras não são permetidas, utilize números para escolher: "))
+        class_e_atributos[0] = int
+        while 1 != class_e_atributos[0] != 2 or class_e_atributos[0] != 3:
+            class_e_atributos.pop()
+            class_e_atributos.append(input("Escolha entre os número 1, 2 e 3 para escolher sua classe: "))
+        verificacao = 1
 
-    Selecione uma classe para começar a jornada.
 
-    1.{personagens[0]}, 2.{personagens[1]}, 3.{personagens[2]}
-    """)
-escolha.append(int(input("Escolha: ")))
-if escolha[0] == 1:
-    escolha.append(lista[0])
-    txt(guerreiro_historia)
+    if class_e_atributos[0] == 1:
+        class_e_atributos.pop()
+        class_e_atributos.append(lista[0]), class_e_atributos.append(guerreiro_atributos)
+    elif class_e_atributos[0] == 2:
+        class_e_atributos.pop()
+        class_e_atributos.append(lista[1]), class_e_atributos.append(elfa_atributos)
+    else:
+        class_e_atributos.pop()
+        class_e_atributos.append(lista[2]), class_e_atributos.append(mago_atributos)
 
-if escolha[0] == 2:
-    escolha.append(lista[1])
-    txt(elfa_historia)
+    nome_do_jogador = input(f"Nos diga o seu nome, ó grande {class_e_atributos[0]}: ")
 
-if escolha[0] == 3:
-    escolha.append(lista[2])
-    txt(mago_historia)
+    if class_e_atributos[0] == 1:
+        class_e_atributos.append(lista[0]), class_e_atributos.append(guerreiro_atributos)
+
+        txt(guerreiro_historia)
+        print(f"""{"-" * 69}
+        Para vingar o seu pai e recuperar a honra de seu reino, 
+    {nome_do_jogador} inicia sua jornada indo ao reino de Minic...
+    {"-" * 69}
+        """)
+
+
+
+    if class_e_atributos[0] == 2:
+        class_e_atributos.append(lista[1]), class_e_atributos.append(elfa_atributos)
+        txt(elfa_historia)
+
+
+    if class_e_atributos[0] == 3:
+        class_e_atributos.append(lista[2]), class_e_atributos.append(mago_atributos)
+        txt(mago_historia)
+

@@ -59,3 +59,7 @@ Poção pequena – Cura 20% da vida
 Poção média – Cura 40% da vida
 Poção grande – Cura 60% da vida
 
+Atributos:
+Mago - [90, 100, 110]
+Guerreiro - [100, 110, 90]
+Arqueira - [110, 90, 100]
