@@ -52,7 +52,7 @@ while class_e_atributos[0] not in numeros:
         class_e_atributos = int
     else:'''
 
-class_e_atributos = [input("Escolha: ")]
+'''class_e_atributos = [input("Escolha: ")]
 v = 0
 while v != 1:
     try:
@@ -70,5 +70,15 @@ while v != 1:
         while True:
             print("Por favor, utilize apénas números para jogar.")
 
-            class_e_atributos.append(int(input("Escolha sua classe: ")))
+            class_e_atributos.append(int(input("Escolha sua classe: ")))'''
 
+personagens = {
+        "p1": ["Guerreiro", 100, 0, 90],
+        "p2": ["Elfo", 110, 90, 100],
+        "p3": ["Mago", 90, 100, 110],
+}
+
+print(personagens["p1"][1:])
+print(personagens["p2"][0])
+print(personagens.get("p1"))
+print(personagens.keys())
