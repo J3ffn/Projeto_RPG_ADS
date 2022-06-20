@@ -9,13 +9,11 @@ def dado():
 #########Váriaveis#########
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[0, 0, 0]]
 atributos = [90, 100, 110]
-inimigo1 = [100, 100, 0]
-atributosbatalha = atributos[:]
+inimigo1 = [100, 1001, 0]
 opcoes = 0
 
-
-# BATALHA QUE VOU TENTAR TRANSFORMAR EM FUNÇÃO
-while inimigo1[0] > 0:
+atributosbatalha = atributos[:]
+while inimigo1[0] > 0 and atributosbatalha[0] > 0:
     opcoes = int(input(f'''{'-' * 40}
     1-> Ataque      2-> Especial      
 
@@ -33,45 +31,161 @@ Escolha o que você vai fazer: '''))
             numtirado = dado()
             print(f'Você jogou o dado e tirou o número {numtirado}!')
             if numtirado == 1:
-                print(f'Você usou CORTE VERTICAL!')
+                print(f'Você usou Feitiço')
                 time.sleep(1)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.20} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.20
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.40} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.40
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.60
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.80} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 1.00
+                time.sleep(2)
             elif numtirado == 2:
-                print('Você usou CORTE VERTICAL!')
+                print('Você usou Feitiço')
                 time.sleep(1)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.20} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.20
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.40} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.40
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.60
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.80} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 1.00
+                time.sleep(2)
             elif numtirado == 3:
-                print('Você usou CORTE VERTICAL!')
+                print('Você usou Feitiço')
                 time.sleep(1)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.20} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.20
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.40} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.40
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.60
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {atributos[1] * 0.80} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
+                    inimigo1[0] -= atributos[1] * 1.00
+                time.sleep(2)
             elif numtirado == 4:
-                print('Você usou ESPADA SAGRADA!')
+                print('Você usou Bola de Fogo')
                 time.sleep(1)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {120 * 0.40} de dano!!!')
+                    inimigo1[0] -= 120 * 0.40
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {120 * 0.40} de dano!!!')
+                    inimigo1[0] -= 120 * 0.40
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {120 * 0.80} de dano!!!')
+                    inimigo1[0] -= 120 * 0.80
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {120 * 0.80} de dano!!!')
+                    inimigo1[0] -= 120 * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {120 * 1.00} de dano!!!')
+                    inimigo1[0] -= 120 * 1.00
+                time.sleep(2)
             elif numtirado == 5:
-                print('Você usou ESPADA SAGRADA!')
+                print('Você usou Raio de gelo')
                 time.sleep(1)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {140 * 0.60} de dano!!!')
+                    inimigo1[0] -= 140 * 0.60
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {140 * 0.60} de dano!!!')
+                    inimigo1[0] -= 140 * 0.60
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {140 * 0.80} de dano!!!')
+                    inimigo1[0] -= 140 * 0.80
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {140 * 0.80} de dano!!!')
+                    inimigo1[0] -= 140 * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {140 * 1.00} de dano!!!')
+                    inimigo1[0] -= 140 * 1.00
+                time.sleep(2)
             elif numtirado == 6:
-                print('Você usou ESPADA SAGRADA!')
+                print('Você usou Raio solar')
                 time.sleep(1)
-            numtirado = dado()
-            print('MASCARIANE jogou o dado para se defender!')
-            time.sleep(2)
-            print(f'Tirou o número {numtirado}')
-            time.sleep(2)
-            if numtirado == 1:
-                print('MASCARIANE se desviou do golpe!')
-            elif numtirado == 2:
-                print(f'MASCARIANE recebeu {atributos[1] * 0.75} de dano!!!')
-                inimigo1[0] -= atributos[1] * 0.75
-            elif numtirado == 3:
-                print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
-                inimigo1[0] -= atributos[1] * 0.60
-            elif numtirado == 4:
-                print(f'MASCARIANE recebeu {atributos[1] * 0.90} de dano!!!')
-                inimigo1[0] -= atributos[1] * 0.90
-            elif numtirado == 5:
-                print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
-                inimigo1[0] -= atributos[1] * 1.00
-            elif numtirado == 6:
-                print('MASCARIANE se desviou do golpe!')
-            time.sleep(2)
+                numtirado = dado()
+                print('MASCARIANE jogou o dado para se defender!')
+                time.sleep(2)
+                print(f'Tirou o número {numtirado}')
+                time.sleep(2)
+                if numtirado == 1:
+                    print('MASCARIANE se desviou do golpe!')
+                elif numtirado == 2:
+                    print(f'MASCARIANE recebeu {160 * 0.60} de dano!!!')
+                    inimigo1[0] -= 160 * 0.60
+                elif numtirado == 3:
+                    print(f'MASCARIANE recebeu {160 * 0.60} de dano!!!')
+                    inimigo1[0] -= 160 * 0.60
+                elif numtirado == 4:
+                    print(f'MASCARIANE recebeu {160 * 0.80} de dano!!!')
+                    inimigo1[0] -= 160 * 0.80
+                elif numtirado == 5:
+                    print(f'MASCARIANE recebeu {160 * 0.80} de dano!!!')
+                    inimigo1[0] -= 160 * 0.80
+                elif numtirado == 6:
+                    print(f'MASCARIANE recebeu {160 * 1.00} de dano!!!')
+                    inimigo1[0] -= 160 * 1.00
+                time.sleep(2)
         elif controle == 2:
             continue
     elif opcoes == 2:
@@ -99,6 +213,7 @@ Escolha um de seus itens: '''))
             else:
                 print('Você não tem esse item!')
                 time.sleep(1)
+
         elif opcoesitens == 2:
             if itens[1][1] > 0:
                 atributosbatalha[0] += atributos[0] * 0.40
@@ -108,6 +223,7 @@ Escolha um de seus itens: '''))
             else:
                 print('Você não tem esse item!')
                 time.sleep(1)
+
         elif opcoesitens == 3:
             if itens[1][2] > 0:
                 atributosbatalha[0] += atributos[0] * 0.20
@@ -121,6 +237,31 @@ Escolha um de seus itens: '''))
             continue
     elif opcoes == 4:
         print('Você pulou a rodada!')       # AINDA VOU COLOCAR A MANA QUE ELE VAI GANHAR
+    if inimigo1[0] > 0:
+        print('Vez de Mascariane')
+        time.sleep(1)
+        numtirado = dado()
+        print('MASCARIANE te atacou! Você jogou o dado para tentar se defender!')
+        time.sleep(2)
+        print(f'Tirou o número {numtirado}')
+        time.sleep(1)
+        if numtirado == 1:
+            print('MASCARIANE errou o golpe!')
+        elif numtirado == 2:
+            print(f'Você recebeu {inimigo1[1] * 0.20} de dano!!!')
+            atributosbatalha[0] -= inimigo1[1] * 0.20
+        elif numtirado == 3:
+            print(f'Você recebeu {inimigo1[1] * 0.40} de dano!!!')
+            atributosbatalha[0] -= inimigo1[1] * 0.40
+        elif numtirado == 4:
+            print(f'Você recebeu {inimigo1[1] * 0.60} de dano!!!')
+            atributosbatalha[0] -= inimigo1[1] * 0.60
+        elif numtirado == 5:
+            print(f'Você recebeu {inimigo1[1] * 0.80} de dano!!!')
+            atributosbatalha[0] -= inimigo1[1] * 0.80
+        elif numtirado == 6:
+            print(f'Você recebeu {inimigo1[1] * 1.00} de dano!!!')
+            atributosbatalha[0] -= inimigo1[1] * 1.00
 if inimigo1[0] <= 0:
     opcoes = int(input(f'''{'-' * 62}
               Parabéns você derrotou MASCARIANE!
@@ -137,3 +278,5 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
     elif opcoes == 3:
         atributos[2] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
+if atributosbatalha[0] <= 0:
+    print('\033[1;31mQue pena, você perdeu!')
