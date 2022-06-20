@@ -279,4 +279,4 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
         atributos[2] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
 if atributosbatalha[0] <= 0:
-    print('\033[1;31mQue pena, você perdeu!')
+    print('\033[1;31mQue pena, você perdeu.')
