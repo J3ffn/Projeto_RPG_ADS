@@ -268,7 +268,7 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
         atributos[0] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
     elif opcoes == 2:
-        atributos[1] += 2                  # VOU AJEITAR UMAS COISAS AQUI
+        atributos[1] += 2                  
         print(f'Seus atributos ficaram assim: {atributos}')
     elif opcoes == 3:
         atributos[2] += 2
