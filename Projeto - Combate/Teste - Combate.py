@@ -9,7 +9,7 @@ def dado():
 #########Váriaveis#########
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[0, 0, 0]]
 atributos = [90, 100, 110]
-inimigo1 = [100, 1001, 0]
+inimigo1 = [100, 100, 0]
 opcoes = 0
 
 atributosbatalha = atributos[:]

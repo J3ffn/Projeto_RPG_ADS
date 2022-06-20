@@ -83,10 +83,11 @@ tiraria os pais do controle sofrido por a igreja. Tudo daria certo..."""
 mago_historia = """"""
 
 ###
-personagens = ["Guerreiro", "Arqueiro", "Mago"]
-guerreiro_atributos = 100, 0, 90
-elfa_atributos = 110, 90, 100
-mago_atributos = 90, 100, 110
+personagens = {
+        "p1": ["Guerreiro", 100, 0, 90],
+        "p2": ["Elfo", 110, 90, 100],
+        "p3": ["Mago", 90, 100, 110],
+}
 class_e_atributos = []
 nome_do_jogador = ""
 lista = [0, 0, 0]  # [HP, Força, Mana]
@@ -98,20 +99,14 @@ while continuar != "n":
     
         Selecione uma classe para começar a jornada.
     
-        1.{personagens[0]}, 2.{personagens[1]}, 3.{personagens[2]}
+        1.{personagens["p1"][0]}, 2.{personagens["p2"][0]}, 3.{personagens["p3"][0]}
         """)
-    class_e_atributos.append(input("Escolha: "))
+    class_e_atributos.append(int(input("Escolha: ")))
     verificacao = 0
-    while verificacao != 1:
-        while class_e_atributos[0] is not class_e_atributos[0].isnumeric():
-            class_e_atributos.pop()
-            class_e_atributos.append(input("letras não são permetidas, utilize números para escolher: "))
-        class_e_atributos[0] = int
-        while 1 != class_e_atributos[0] != 2 or class_e_atributos[0] != 3:
-            class_e_atributos.pop()
-            class_e_atributos.append(input("Escolha entre os número 1, 2 e 3 para escolher sua classe: "))
-        verificacao = 1
-
+    # Colocar aqui uma verificação de erro depois.
+    class_e_atributos[0] = int
+    class_e_atributos.append(personagens[class_e_atributos[0] - 1]), class_e_atributos.pop(0)
+    class_e_atributos.append(personagens[1:])
 
     if class_e_atributos[0] == 1:
         class_e_atributos.pop()
