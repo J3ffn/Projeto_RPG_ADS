@@ -1,18 +1,17 @@
 # ESSE NÃO É O RESULTADO FINAL, ESTÁ CHEIO DE ERROS
 import time, random
 
-
-#########Funções#########
 def dado():
     return random.randint(1, 6)
 
 #########Váriaveis#########
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[0, 0, 0]]
 atributos = [90, 100, 110]
-inimigo1 = [100, 100, 0]
+inimigo1 = [100, 1000, 0]
 opcoes = 0
-
 atributosbatalha = atributos[:]
+
+
 while inimigo1[0] > 0 and atributosbatalha[0] > 0:
     opcoes = int(input(f'''{'-' * 40}
     1-> Ataque      2-> Especial      
@@ -30,60 +29,8 @@ Escolha o que você vai fazer: '''))
             time.sleep(1)
             numtirado = dado()
             print(f'Você jogou o dado e tirou o número {numtirado}!')
-            if numtirado == 1:
+            if numtirado == 1 or numtirado == 2 or numtirado == 3:
                 print(f'Você usou Feitiço')
-                time.sleep(1)
-                numtirado = dado()
-                print('MASCARIANE jogou o dado para se defender!')
-                time.sleep(2)
-                print(f'Tirou o número {numtirado}')
-                time.sleep(2)
-                if numtirado == 1:
-                    print('MASCARIANE se desviou do golpe!')
-                elif numtirado == 2:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.20} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.20
-                elif numtirado == 3:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.40} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.40
-                elif numtirado == 4:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.60
-                elif numtirado == 5:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.80} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.80
-                elif numtirado == 6:
-                    print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 1.00
-                time.sleep(2)
-            elif numtirado == 2:
-                print('Você usou Feitiço')
-                time.sleep(1)
-                numtirado = dado()
-                print('MASCARIANE jogou o dado para se defender!')
-                time.sleep(2)
-                print(f'Tirou o número {numtirado}')
-                time.sleep(2)
-                if numtirado == 1:
-                    print('MASCARIANE se desviou do golpe!')
-                elif numtirado == 2:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.20} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.20
-                elif numtirado == 3:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.40} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.40
-                elif numtirado == 4:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.60} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.60
-                elif numtirado == 5:
-                    print(f'MASCARIANE recebeu {atributos[1] * 0.80} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 0.80
-                elif numtirado == 6:
-                    print(f'MASCARIANE recebeu {atributos[1] * 1.00} de dano!!!')
-                    inimigo1[0] -= atributos[1] * 1.00
-                time.sleep(2)
-            elif numtirado == 3:
-                print('Você usou Feitiço')
                 time.sleep(1)
                 numtirado = dado()
                 print('MASCARIANE jogou o dado para se defender!')
@@ -238,7 +185,7 @@ Escolha um de seus itens: '''))
     elif opcoes == 4:
         print('Você pulou a rodada!')       # AINDA VOU COLOCAR A MANA QUE ELE VAI GANHAR
     if inimigo1[0] > 0:
-        print('Vez de Mascariane')
+        print('\033[1;40;31mVez de Mascariane\033[m')
         time.sleep(1)
         numtirado = dado()
         print('MASCARIANE te atacou! Você jogou o dado para tentar se defender!')
@@ -279,4 +226,4 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
         atributos[2] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
 if atributosbatalha[0] <= 0:
-    print('\033[1;31mQue pena, você perdeu.')
+    print('\033[1;40;31mQue pena, você perdeu.\033[m')
