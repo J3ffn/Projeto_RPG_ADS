@@ -4,8 +4,8 @@ def dado():
     return random.randint(1, 6)
 
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[1, 1, 0]]
-atributos = [500, 100, 110]
-inimigo1 = [750, 50, 0]
+atributos = [90, 100, 110]
+inimigo1 = [200, 50, 0]
 opcoes = 0
 atributosbatalha = atributos[:]
 
@@ -268,7 +268,7 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
         atributos[0] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
     elif opcoes == 2:
-        atributos[1] += 2                  
+        atributos[1] += 2
         print(f'Seus atributos ficaram assim: {atributos}')
     elif opcoes == 3:
         atributos[2] += 2
