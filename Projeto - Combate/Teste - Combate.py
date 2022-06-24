@@ -7,7 +7,6 @@ def dado():
 
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'], [1, 1, 0]]
 atributos = [90, 100, 100]
-opcoes = 0
 
 
 def combate(inimigo_atb, inimigo_nome):
@@ -272,11 +271,11 @@ Escolha um de seus itens: '''))
                 print(f'Você recebeu {inimigo_atb[1] * 1.00} de dano!!!')
                 atributosbatalha[0] -= inimigo_atb[1] * 1.00
     if inimigo_atb[0] <= 0:
-        opcoes = int(input(f'''{'-' * 62}
+        opcoes = int(input(f'''{'-' * 60}
                   \033[0;32mParabéns você derrotou {inimigo_nome}!\033[m
-                 1-> Vida     2-> Ataque     3-> Mana
-    {'-' * 62}
-    Escolha um dos atributos para aumentar 2 pontos: '''))
+            1-> Vida     2-> Ataque     3-> Mana
+{'-' * 60}
+Escolha um dos atributos para aumentar 2 pontos: '''))
         time.sleep(1)
         if opcoes == 1:
             atributos[0] += 2
@@ -291,4 +290,4 @@ Escolha um de seus itens: '''))
         print('\033[1;40;31mQue pena, você perdeu.\033[m')
 
 
-combate(inimigo_atb=[400, 90], inimigo_nome='Mascariane')
+combate(inimigo_atb=[100, 100], inimigo_nome='???')
