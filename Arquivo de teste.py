@@ -72,7 +72,7 @@ while v != 1:
 
             class_e_atributos.append(int(input("Escolha sua classe: ")))'''
 
-personagens = {
+'''personagens = {
         "p1": ["Guerreiro", 100, 0, 90],
         "p2": ["Elfo", 110, 90, 100],
         "p3": ["Mago", 90, 100, 110],
@@ -81,4 +81,37 @@ personagens = {
 print(personagens["p1"][1:])
 print(personagens["p2"][0])
 print(personagens.get("p1"))
-print(personagens.keys())
+print(personagens.keys())'''
+
+'''impacto_na_historia = {
+
+}
+impacto_na_historia["IH_1"] = "Não sabe que o ovo estava lá."
+
+print(impacto_na_historia.keys())'''
+
+import time, random
+
+def dado():
+    return random.randint(1, 3)
+
+
+class_e_atributos = ["Guerreiro", [100, 100, 90], ["Corte vertical", "Espada sagrada", "H3"]]
+inimigo = [200]
+numero_tirado = 1
+escolha = []
+print(numero_tirado)
+aux = int(input("Usar habilidade? [1]Sim [2]Não: "))
+
+if numero_tirado == 1:
+    print(f"Você usou o ataque {class_e_atributos[2][0]}")
+    print(f"Dano: {class_e_atributos[1][1] + (class_e_atributos[1][1] * 0.15) if aux == 1 and class_e_atributos[0] == 'Guerreiro' else class_e_atributos[1][1]}")
+    inimigo[0] -= class_e_atributos[1][1] + (class_e_atributos[1][1] * 0.15) if aux == 1 and class_e_atributos[0] == 'Guerreiro' else class_e_atributos[1][1]
+    print(f"Vida do inimigo: {inimigo[0]}")
+
+if numero_tirado == 2:
+    print(f"Você usou o ataque {class_e_atributos[2][1]}")
+
+if numero_tirado == 3:
+    print(f"Você usou o ataque {class_e_atributos[2][2]}")
+

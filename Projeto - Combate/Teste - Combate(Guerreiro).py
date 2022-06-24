@@ -4,6 +4,7 @@ import time, random
 def dado():
     return random.randint(1, 6)
 
+
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'], [1, 1, 0]]
 atributos = [90, 100, 100]
 opcoes = 0

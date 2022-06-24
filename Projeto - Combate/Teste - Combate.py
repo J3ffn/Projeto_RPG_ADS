@@ -1,14 +1,15 @@
 import time, random
 
+
 def dado():
     return random.randint(1, 6)
 
-itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[1, 1, 0]]
+
+itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'], [1, 1, 0]]
 atributos = [90, 100, 100]
 inimigo1 = [200, 50, 0]
 opcoes = 0
 atributosbatalha = atributos[:]
-
 
 while inimigo1[0] > 0 and atributosbatalha[0] > 0:
     print('-' * 40)
