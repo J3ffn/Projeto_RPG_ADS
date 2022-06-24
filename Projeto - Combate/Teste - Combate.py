@@ -4,16 +4,19 @@ def dado():
     return random.randint(1, 6)
 
 itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],[1, 1, 0]]
-atributos = [90, 100, 110]
+atributos = [90, 100, 100]
 inimigo1 = [200, 50, 0]
 opcoes = 0
 atributosbatalha = atributos[:]
 
 
 while inimigo1[0] > 0 and atributosbatalha[0] > 0:
+    print('-' * 40)
+    print(f'[HP: {atributosbatalha[0]}]{f"[HP.I: {inimigo1[0]}]":>32}')
+    print(f'[MANA: {atributosbatalha[2]}]')
     opcoes = int(input(f'''{'-' * 40}
     1-> Ataque      2-> Especial      
-
+                                        
     3-> Itens       4-> Pular rodada
 {'-' * 40}
 Escolha o que você vai fazer: '''))
@@ -238,7 +241,7 @@ Escolha um de seus itens: '''))
         numtirado = dado()
         print('MASCARIANE te atacou! Você jogou o dado para tentar se defender!')
         time.sleep(2)
-        print(f'Tirou o número {numtirado}')
+        print(f'Você tirou o número {numtirado}')
         time.sleep(1)
         if numtirado == 1:
             print('MASCARIANE errou o golpe!')
