@@ -134,10 +134,10 @@ if class_e_atributos[0] == "Guerreiro":
 então decide ir a Minic, onde o rei era o melhor amigo de
 seu pai.
 """, 0.06)
-    escolhas.append(int(input("Reinos:
-        "[1]. Minic"
-        "[2]. Blugg"
-"Sua escolha: ")))
+    escolhas.append(int(input("Reinos:\n"
+                              "[1]. Minic\n"
+                              "[2]. Blugg\n"
+                              "Sua escolha: ")))
 # Adicionar verificação de erro.
 
     if escolhas[0] == 1:
