@@ -37,11 +37,11 @@ for i in range(1):
 
 
 ## Impressão de texto.
-def txt(texto):
+def txt(texto, tempo):
     for i in range(1):
         for c in texto:
             print(c, end='')
-            # time.sleep(0.023 if guerreiro_historia or elfa_historia or mago_historia else 0.2)
+            time.sleep(tempo if "-" not in texto else 0)
         print()
 
 
@@ -134,10 +134,10 @@ if class_e_atributos[0] == "Guerreiro":
 então decide ir a Minic, onde o rei era o melhor amigo de
 seu pai.
 """, 0.06)
-    escolhas.append(int(input("""Reinos:
-        [1]. Minic
-        [2]. Blugg
-Sua escolha: """)))
+    escolhas.append(int(input("Reinos:
+        "[1]. Minic"
+        "[2]. Blugg"
+"Sua escolha: ")))
 # Adicionar verificação de erro.
 
     if escolhas[0] == 1:
@@ -507,4 +507,4 @@ elif class_e_atributos[0] == "Elfo":
 
 elif class_e_atributos[0] == "Mago":
     print("H2")
-    
+
