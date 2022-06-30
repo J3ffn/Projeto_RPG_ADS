@@ -6,7 +6,6 @@ if itens[1][0] > 0:
 else:
     print("Não é maior.")'''
 
-import time
 
 '''texto = f"""SOIDJAODIAJSOIJASDIAJS
 poiasjdpiodsajdpasoj 
@@ -90,7 +89,7 @@ impacto_na_historia["IH_1"] = "Não sabe que o ovo estava lá."
 
 print(impacto_na_historia.keys())'''
 
-import time, random
+'''import time, random
 
 def dado():
     return random.randint(1, 3)
@@ -113,5 +112,28 @@ if numero_tirado == 2:
     print(f"Você usou o ataque {class_e_atributos[2][1]}")
 
 if numero_tirado == 3:
-    print(f"Você usou o ataque {class_e_atributos[2][2]}")
+    print(f"Você usou o ataque {class_e_atributos[2][2]}")'''
 
+'''personagens = [
+    ["Guerreiro", [100, 0, 90]],
+    ["Elfo", [110, 90, 100]],
+    ["Mago", [90, 100, 110]],
+]
+
+print(personagens[0][0]) # Gerreiro
+print(personagens[1][0]) # Elfo
+print(personagens[2][0]) # Mago
+itens = ['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G', [0, 0, 0, 0]]
+print(itens[4][1])'''
+class_e_atributos = []
+personagens = [
+    [["Guerreiro"], [100, 90, 90]],
+    [["Elfo"], [110, 90, 100]],
+    [["Mago"], [90, 100, 110]],
+]
+
+class_e_atributos.append(int(input("Sua escolha: ")))
+class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_atributos[0] - 1]
+class_e_atributos = [v for v in class_e_atributos[0]]
+
+print(f'{class_e_atributos[1][1] += 5}')
