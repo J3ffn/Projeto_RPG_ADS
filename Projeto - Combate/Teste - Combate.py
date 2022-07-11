@@ -398,6 +398,6 @@ def combate(inimigo_atb, inimigo_nome, final):
         elif inimigo_atb[0] <= 0:
             finalizar = 0
 
-    itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [1, 1, 1, 1]]
-    atributos = [90, 100, 100]
-    combate([2000, 90], 'Mascariane', 'off')
+itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [1, 1, 1, 1]]
+atributos = [90, 100, 100]
+combate([2000, 90], 'Mascariane', 'off')
