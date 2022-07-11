@@ -6,8 +6,8 @@ personagens = [
     ["Elfo", [110, 90, 100], ["Flecha rápida", "Flecha explosiva", "Flecha da Fé", "Chuva de flechas"]],
     ["Mago", [90, 100, 110], ["Mago", [90, 100, 110], ["Feitiço", "Sabor Veneno", "Bola sombria", "Onda infernal"]]],
 ]
-class_e_atributos = ["Guerreiro", [100, 0, 90], ["??????", "Corte Vertical", "Espada sagrada", "??????"]]
-class_e_atributos.append(int(input("Sua escolha: ")))
+class_e_atributos = [0]
+class_e_atributos[0] = int(input("Sua escolha: "))
 class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_atributos[0] - 1]
 class_e_atributos = [v for v in class_e_atributos[0]]
 
