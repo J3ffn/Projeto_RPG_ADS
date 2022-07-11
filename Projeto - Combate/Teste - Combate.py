@@ -5,14 +5,16 @@ escolha = int(input())
 class_e_atributos = []
 
 if escolha == 1:
-    class_e_atributos = ["Guerreiro", [100, 110, 90], "Espada afiada"]
+    class_e_atributos = ["Guerreiro", [100, 110, 90], ["??????", "Corte Vertical", "Espada sagrada", "??????"]]
 elif escolha == 2:
-    class_e_atributos = ["Elfo", [110, 90, 100], "Flecha rápida"]
+    class_e_atributos = ["Elfo", [110, 90, 100], ["Flecha rápida", "Flecha explosiva", "Flecha da Fé", "Chuva de flechas"]]
 elif escolha == 3:
-    class_e_atributos =["Mago", [90, 100, 110], "Feitiço"]
+    class_e_atributos = ["Mago", [90, 100, 110], ["Feitiço", "Sabor Veneno", "Bola sombria", "Onda infernal"]]
+
+
 
 def combate(inimigo_atb, inimigo_nome, final):
-    atributosbatalha = atributos[:]
+    atributosbatalha = class_e_atributos[1]
     while inimigo_atb[0] > 0 and atributosbatalha[0] > 0:
         print('-' * 40)
         print(f'[HP: {atributosbatalha[0]}]{f"[HP.I: {inimigo_atb[0]}]":>32}')
@@ -42,10 +44,10 @@ Escolha o que você vai fazer: '''))
             if controle == 1:
                 print('O dado foi jogado...')
                 time.sleep(1)
-                dado = random.randint(1, 3)
+                dado = random.randint(1, 6)
                 print(f'Você jogou o dado e tirou o número {dado}!')
                 if dado == 1 or dado == 2 or dado == 3:
-                    print(f'Você usou {class_e_atributos[2]}')
+                    print(f'Você usou {class_e_atributos[2][0]}')
                     time.sleep(1)
                     dado = random.randint(1, 6)
                     print(f'{inimigo_nome} jogou o dado para se defender!')
@@ -72,11 +74,11 @@ Escolha o que você vai fazer: '''))
                     time.sleep(2)
                 elif dado == 4:
                     if atributosbatalha[2] < 40:
-                        print('Você não tem mana o suficiente para dá esse golpe!')
+                        print('Você não tem mana o suficiente para dar esse golpe!')
                         time.sleep(2)
                     else:
                         atributosbatalha[2] -= 40
-                        print('Você usou Bola de Fogo')
+                        print(f'Você usou {class_e_atributos[2][1]}')
                         time.sleep(1)
                         dado = random.randint(1, 6)
                         print(f'{inimigo_nome} jogou o dado para se defender!')
@@ -103,11 +105,11 @@ Escolha o que você vai fazer: '''))
                         time.sleep(2)
                 elif dado == 5:
                     if atributosbatalha[2] < 60:
-                        print('Você não tem mana o suficiente para dá esse golpe!')
+                        print('Você não tem mana o suficiente para dar esse golpe!')
                         time.sleep(2)
                     else:
                         atributosbatalha[2] -= 60
-                        print('Você usou Raio de gelo')
+                        print(f'Você usou {class_e_atributos[2][2]}')
                         time.sleep(1)
                         dado = random.randint(1, 6)
                         print(f'{inimigo_nome} jogou o dado para se defender!')
@@ -134,11 +136,11 @@ Escolha o que você vai fazer: '''))
                         time.sleep(2)
                 elif dado == 6:
                     if atributosbatalha[2] < 80:
-                        print('Você não tem mana o suficiente para dá esse golpe!')
+                        print('Você não tem mana o suficiente para dar esse golpe!')
                         time.sleep(2)
                     else:
                         atributosbatalha[2] -= 80
-                        print('Você usou Raio solar')
+                        print(f'Você usou {class_e_atributos[2][3]}')
                         time.sleep(1)
                         dado = random.randint(1, 6)
                         print(f'{inimigo_nome} jogou o dado para se defender!')
@@ -256,75 +258,83 @@ Escolha um de seus itens: '''))
 {'-' * 59}
 Escolha um de seus itens: '''))
             if opcoesitens == 1:
-                if itens[4][0] > 0:
-                    atributosbatalha[0] += 40
-                    itens[4][0] -= 1
-                    print('Você curou a vida!')
-                    time.sleep(1)
-                    if atributosbatalha[0] == atributos[0]:
+                if itens[1][0] > 0:
+                    if atributosbatalha[0] == class_e_atributos[1][0]:
                         print('Você está com a vida cheia!')
                         continue
-                    elif atributosbatalha[0] > atributos[0]:
-                        atributosbatalha[0] = atributos[0]
+                    else:
+                        atributosbatalha[0] += 40
+                        itens[1][0] -= 1
+                        print('Você curou a vida!')
+                        time.sleep(1)
+                    if atributosbatalha[0] > class_e_atributos[1][0]:
+                        atributosbatalha[0] = class_e_atributos[1][0]
                 else:
                     print('Você não tem esse item!')
                     time.sleep(1)
+                    continue
 
             elif opcoesitens == 2:
-                if itens[4][1] > 0:
-                    atributosbatalha[0] += 60
-                    itens[4][1] -= 1
-                    print('Você curou a vida!')
-                    time.sleep(1)
-                    if atributosbatalha[0] == atributos[0]:
+                if itens[1][1] > 0:
+                    if atributosbatalha[0] == class_e_atributos[1][0]:
                         print('Você está com a vida cheia!')
                         continue
-                    elif atributosbatalha[0] > atributos[0]:
-                        atributosbatalha[0] = atributos[0]
+                    else:
+                        atributosbatalha[0] += 40
+                        itens[1][1] -= 1
+                        print('Você curou a vida!')
+                        time.sleep(1)
+                    if atributosbatalha[0] > class_e_atributos[1][0]:
+                        atributosbatalha[0] = class_e_atributos[1][0]
                 else:
                     print('Você não tem esse item!')
                     time.sleep(1)
+                    continue
 
             elif opcoesitens == 3:
-                if itens[4][2] > 0:
-                    atributosbatalha[0] += 40
-                    itens[4][2] -= 1
-                    print('Você recuperou sua mana!')
-                    time.sleep(1)
-                    if atributosbatalha[2] == atributos[2]:
-                        print('Você está com seus pontos de mana no máximo!')
+                if itens[1][2] > 0:
+                    if atributosbatalha[0] == class_e_atributos[1][0]:
+                        print('Você está com a vida cheia!')
                         continue
-                    elif atributosbatalha[2] > atributos[2]:
-                        atributosbatalha[2] = atributos[2]
+                    else:
+                        atributosbatalha[0] += 40
+                        itens[1][2] -= 1
+                        print('Você curou a vida!')
+                        time.sleep(1)
+                    if atributosbatalha[0] > class_e_atributos[1][0]:
+                        atributosbatalha[0] = class_e_atributos[1][0]
                 else:
                     print('Você não tem esse item!')
                     time.sleep(1)
+                    continue
 
             elif opcoesitens == 4:
-                if itens[4][3] > 0:
-                    atributosbatalha[0] += 60
-                    itens[4][3] -= 1
-                    print('Você recuperou sua mana!')
-                    time.sleep(1)
-                    if atributosbatalha[2] == atributos[2]:
-                        print('Você está com seus pontos de mana no máximo!')
+                if itens[1][3] > 0:
+                    if atributosbatalha[0] == class_e_atributos[1][0]:
+                        print('Você está com a vida cheia!')
                         continue
-                    elif atributosbatalha[2] > atributos[2]:
-                        atributosbatalha[2] = atributos[2]
+                    else:
+                        atributosbatalha[0] += 40
+                        itens[1][3] -= 1
+                        print('Você curou a vida!')
+                        time.sleep(1)
+                    if atributosbatalha[0] > class_e_atributos[1][0]:
+                        atributosbatalha[0] = class_e_atributos[1][0]
                 else:
                     print('Você não tem esse item!')
                     time.sleep(1)
+                    continue
             elif opcoesitens == 5:
                 continue
 
 
         elif opcoes == 4:
             print('Você pulou a rodada!')
-            atributosbatalha[2] += 20
+            atributosbatalha[2] += 35
             time.sleep(1)
-            print('Você recuperou 20 de mana!')
-            if atributosbatalha[2] > atributos[2]:
-                atributosbatalha[2] = atributos[2]
+            print('Você recuperou 35 de mana!')
+            if atributosbatalha[2] > class_e_atributos[1][2]:
+                atributosbatalha[2] = class_e_atributos[1][2]
 
 
         if inimigo_atb[0] > 0:
@@ -364,17 +374,17 @@ Escolha um de seus itens: '''))
 Escolha um dos atributos para aumentar 2 pontos: '''))
         time.sleep(1)
         if opcoes == 1:
-            atributos[0] += 2
+            class_e_atributos[1][0] += 2
             print(f'Seus atributos ficaram assim: {atributos}')
         elif opcoes == 2:
-            atributos[1] += 2
+            class_e_atributos[1][1] += 2
             print(f'Seus atributos ficaram assim: {atributos}')
         elif opcoes == 3:
-            atributos[2] += 2
+            class_e_atributos[1][2] += 2
             print(f'Seus atributos ficaram assim: {atributos}')
     if atributosbatalha[0] <= 0:
         print('\033[1;40;31mQue pena, você perdeu.\033[m')
 
-itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [0, 0, 0, 0]]
+itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [1, 1, 1, 1]]
 atributos = [90, 100, 100]
 combate([2000, 90], 'Mascariane', 'off')
