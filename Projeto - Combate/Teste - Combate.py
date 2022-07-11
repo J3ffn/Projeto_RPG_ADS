@@ -89,7 +89,13 @@ Escolha o que você vai fazer: '''))
                             print(f'{inimigo_nome} se desviou do golpe!')
                         elif dado == 2:
                             print(f'{inimigo_nome} recebeu {120 * 0.40} de dano!!!')
-                            inimigo_atb[0] -= 120 * 0.40
+                            if class_e_atributos[0] == "Mago":
+                                inimigo_atb[0] -= 120 * 0.40
+                            elif class_e_atributos[0] == "Guerreiro":
+                                inimigo_atb[0] -= 120 * 0.40
+                            else:
+                                inimigo_atb[0] -= 120 * 0.40
+
                         elif dado == 3:
                             print(f'{inimigo_nome} recebeu {120 * 0.40} de dano!!!')
                             inimigo_atb[0] -= 120 * 0.40

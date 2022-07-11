@@ -125,7 +125,7 @@ print(personagens[1][0]) # Elfo
 print(personagens[2][0]) # Mago
 itens = ['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G', [0, 0, 0, 0]]
 print(itens[4][1])'''
-class_e_atributos = []
+'''class_e_atributos = []
 personagens = [
     [["Guerreiro"], [100, 90, 90]],
     [["Elfo"], [110, 90, 100]],
@@ -136,4 +136,9 @@ class_e_atributos.append(int(input("Sua escolha: ")))
 class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_atributos[0] - 1]
 class_e_atributos = [v for v in class_e_atributos[0]]
 
-print(f'{class_e_atributos[1][1] += 5}')
+print(f'{class_e_atributos[1][1] += 5}')'''
+def txt(texto, tempo):
+    for i in texto:
+        
+
+txt("Equipe: Jefferson Mangueira Izaquiel Josias Carneiro", 0.2)
