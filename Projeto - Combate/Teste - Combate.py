@@ -1,41 +1,30 @@
-
 import time
 import random
 
-personagens = [
-    ["Guerreiro", [100, 0, 90], ["??????", "Corte Vertical", "Espada sagrada", "??????"]],
-    ["Elfo", [110, 90, 100], ["Flecha rápida", "Flecha explosiva", "Flecha da Fé", "Chuva de flechas"]],
-    ["Mago", [90, 100, 110], ["Mago", [90, 100, 110], ["Feitiço", "Sabor Veneno", "Bola sombria", "Onda infernal"]]],
-]
-class_e_atributos = [0]
-class_e_atributos[0] = int(input("Sua escolha: "))
-class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_atributos[0] - 1]
-class_e_atributos = [v for v in class_e_atributos[0]]
-
 def combate(inimigo_atb, inimigo_nome, final):
     finalizar = 1
-    atributosbatalha = class_e_atributos[1]
     while finalizar != 0:
+        atributosbatalha = class_e_atributos[1][:]
         while inimigo_atb[0] > 0 and atributosbatalha[0] > 0:
             print('-' * 40)
             print(f'[HP: {atributosbatalha[0]}]{f"[HP.I: {inimigo_atb[0]}]":>32}')
             print(f'[MANA: {atributosbatalha[2]}]')
             opcoes = int(input(f'''{'-' * 40}
-        1-> Ataque      2-> Especial      
+    1-> Ataque      2-> Especial      
 
-        3-> Itens       4-> Pular rodada
-    {'-' * 40}
-    Escolha o que você vai fazer: '''))
+    3-> Itens       4-> Pular rodada
+{'-' * 40}
+Escolha o que você vai fazer: '''))
             while opcoes > 4 or opcoes < 0:
                 print('-' * 40)
                 print(f'[HP: {atributosbatalha[0]}]{f"[HP.I: {inimigo_atb[0]}]":>32}')
                 print(f'[MANA: {atributosbatalha[2]}]')
                 opcoes = int(input(f'''{'-' * 40}
-        1-> Ataque      2-> Especial      
+    1-> Ataque      2-> Especial      
 
-        3-> Itens       4-> Pular rodada
-    {'-' * 40}
-    Escolha o que você vai fazer: '''))
+    3-> Itens       4-> Pular rodada
+{'-' * 40}
+Escolha o que você vai fazer: '''))
 
 
             if opcoes == 1:
@@ -225,15 +214,15 @@ def combate(inimigo_atb, inimigo_nome, final):
 
             elif opcoes == 2:
                 opcoesesp = int(input(f'''{'-' * 40}
-            1-> Cura      N-> Voltar
-    {'-' * 40}
-    Escolha um especial ou clique em outro qualquer número para voltar: '''))
+        1-> Cura      N-> Voltar
+{'-' * 40}
+Escolha um especial ou clique em outro qualquer número para voltar: '''))
                 if opcoesesp == 1:
                     if atributosbatalha[2] >= 60:
                         atributosbatalha[2] -= 60
                         atributosbatalha[0] += 60
-                        if atributosbatalha[0] > atributos[0]:
-                            atributosbatalha[0] = atributos[0]
+                        if atributosbatalha[0] > class_e_atributos[1][0]:
+                            atributosbatalha[0] = class_e_atributos[1][0]
                         print(f'Sua vida agora é {atributosbatalha[0]}')
                     else:
                         print('Você não tem mana o suficiente para usar seu especial!')
@@ -248,22 +237,22 @@ def combate(inimigo_atb, inimigo_nome, final):
                         print(f'[{itens[l][c]:^20}]', end='')
                     print()
                 opcoesitens = int(input(f'''{'-' * 59}
-            1-> Poção de cura M     2-> Poção de cura G     
+        1-> Poção de cura M     2-> Poção de cura G     
             
-            3-> Poção de mana M     4-> Poção de mana G     
+        3-> Poção de mana M     4-> Poção de mana G     
             
-                            5-> Voltar 
-    {'-' * 59}
-    Escolha um de seus itens: '''))
+                        5-> Voltar 
+{'-' * 59}
+Escolha um de seus itens: '''))
                 while opcoesitens > 5 or opcoesitens < 0:
                     opcoesitens = int(input(f'''{'-' * 59}
-            1-> Poção de cura M     2-> Poção de cura G     
+        1-> Poção de cura M     2-> Poção de cura G     
             
-            3-> Poção de mana M     4-> Poção de mana G     
+        3-> Poção de mana M     4-> Poção de mana G     
             
-                            5-> Voltar 
-    {'-' * 59}
-    Escolha um de seus itens: '''))
+                        5-> Voltar 
+{'-' * 59}
+Escolha um de seus itens: '''))
                 if opcoesitens == 1:
                     if itens[1][0] > 0:
                         if atributosbatalha[0] == class_e_atributos[1][0]:
@@ -375,20 +364,20 @@ def combate(inimigo_atb, inimigo_nome, final):
 
         if inimigo_atb[0] <= 0:
             opcoes = int(input(f'''{'-' * 60}
-                    \033[0;32mParabéns você derrotou {inimigo_nome}!\033[m
-                1-> Vida     2-> Ataque     3-> Mana
-    {'-' * 60}
-    Escolha um dos atributos para aumentar 2 pontos: '''))
+            \033[0;32mParabéns você derrotou {inimigo_nome}!\033[m
+            1-> Vida     2-> Ataque     3-> Mana
+{'-' * 60}
+Escolha um dos atributos para aumentar 2 pontos: '''))
             time.sleep(1)
             if opcoes == 1:
                 class_e_atributos[1][0] += 2
-                print(f'Seus atributos ficaram assim: {atributos}')
+                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
             elif opcoes == 2:
                 class_e_atributos[1][1] += 2
-                print(f'Seus atributos ficaram assim: {atributos}')
+                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
             elif opcoes == 3:
                 class_e_atributos[1][2] += 2
-                print(f'Seus atributos ficaram assim: {atributos}')
+                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
         if atributosbatalha[0] <= 0:
             print('\033[1;40;31mQue pena, você perdeu.\033[m')
 
@@ -398,6 +387,17 @@ def combate(inimigo_atb, inimigo_nome, final):
         elif inimigo_atb[0] <= 0:
             finalizar = 0
 
+personagens = [
+    ["Guerreiro", [100, 0, 90], ["??????", "Corte Vertical", "Espada sagrada", "??????"]],
+    ["Elfo", [110, 90, 100], ["Flecha rápida", "Flecha explosiva", "Flecha da Fé", "Chuva de flechas"]],
+    ["Mago", [90, 100, 110], ["Feitiço", "Sabor Veneno", "Bola sombria", "Onda infernal"]],
+]
+
+class_e_atributos = [0]
+class_e_atributos[0] = int(input("Sua escolha: "))
+class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_atributos[0] - 1]
+class_e_atributos = [v for v in class_e_atributos[0]]
+
 itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [1, 1, 1, 1]]
-atributos = [90, 100, 100]
-combate([2000, 90], 'Mascariane', 'off')
+combate([2000, 500], 'Mascariane', 'off')
+print(class_e_atributos[1])
