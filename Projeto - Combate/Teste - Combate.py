@@ -382,7 +382,11 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
             print('\033[1;40;31mQue pena, você perdeu.\033[m')
 
         if class_e_atributos[1][0] <= 0:
-            finalizar = 1
+            finalizar = int(input("Você quer continuar?\n"
+                                  "[1].Para reiniciar batalha.\n"
+                                  "[2].Para finalizar o jogo."))
+            print("Reiniciando combate!")
+            time.sleep(0.4)
 
         elif inimigo_atb[0] <= 0:
             finalizar = 0
