@@ -26,7 +26,6 @@ Escolha o que você vai fazer: '''))
 {'-' * 40}
 Escolha o que você vai fazer: '''))
 
-
             if opcoes == 1:
                 controle = int(input('Se você quiser jogar o dado para atacar digite (1), se quiser voltar digite (2): '))
                 while 1 != controle != 2:

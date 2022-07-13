@@ -441,20 +441,20 @@ elif class_e_atributos[0] == "Elfo":
             escolhas.append(int(input("Escolhas:\n"
                                       "[1].Perguntar sobre ítem roubado.\n"
                                       "[2].Falar sobre família."
-                                      "Escolha: \n")))
+                                      "Escolha: ")))
             time.sleep(0.2)
             if escolhas[2] == 1:
-                txt("\n-Ítem? Que ítem? Aaaa, você está falando, Burp!.., do ovo", 0.07)
+                txt("\n-'Ítem? Que ítem? Aaaa, você está falando, Burp!.., do ovo'", 0.07)
                 txt("OVO??", 0.1)
                 txt("[Ele apénas sorri e se deita.]", 0.1)
                 time.sleep(0.3)
                 txt("-'Eu não deveria ter te contado isso, mas agora já era.'", 0.06)
-                txt("'O ovo é uma erança de sua família, tempos atrás eu cudava dele, até que..'")
+                txt("-'O ovo é uma erança de sua família, tempos atrás eu cudava dele, até que..'")
                 time.sleep(0.2)
                 txt("ATÉ QUE O QUE?!", 0.2)
-                txt("'Até que o chefia chegou de ameaçou matar a todos se não entregassem sua última\n"
+                txt("-'Até que o chefia chegou de ameaçou matar a todos se não entregassem sua última\n"
                 "erança, que era o OVO, ainda não sabemos o que o ovo vai gerar, mas é algo diferente'\n", 0.08)
-                txt("'Não posso mais falar nada sobre, senão serei morto.'", 0.08)
+                txt("-'Não posso mais falar nada sobre, senão serei morto.'", 0.08)
                 time.sleep(0.2)
                 txt("O barman está te chamando!", 0.08)
                 escolhas.append("Escolhas:\n"
@@ -714,19 +714,263 @@ elif class_e_atributos[0] == "Elfo":
                             txt("Descendo uma masmorra, percebe que está sendo levada para um experimento.", 0.08)
                             txt("Eles te deixam sozinho com o OVO, talvez por acha que você virará alimento.", 0.08)
                             txt("Mas pelo contrário, no momento em que se sentou ao lado dele ele rachou, como se estivesse chocando", 0.08)
-                            txt("E estava. Assim que os guardas saíram ele chocou, mostrou ser um YETI, só que imaginou você como a mamãe.", 0.08)
-                            
+                            txt("E estava. Assim que os guardas saíram ele chocou, mostrou ser um YETI, só que te você como a mamãe dele.", 0.08)
+                            txt("Os guardas estão votando!!", 0.08)
+                            time.sleep(0.4)
+                            txt("Uma batalha está se aproximando.", 0.08)
+                            # Batalha:
+                            # Nome: Os gandias
+                            # Atb: [700, 70]
+                            dinheiro += 100
+                            txt("Agora vocês estão livres, e estão juntos!!", 0.08)
+                            txt("Finalmente conseguiu recuperar o que antes era de sua avó.", 0.08)
+                            txt("Após isso, você se apresanda o YETI para a família de Vinicta.", 0.08)
+                            txt("Todos estão perplexos, a muito tempo não viam tal ser.", 0.08)
+                            txt("-'As histórias dos livros eram verdadeiras, nós tinhamos um passado.'")
+                            txt("Após isso começaram a reconstruír sua antiga cultura!", 0.08)
+
                     elif escolhas[5] == 2:
-                        print("Voltar aqui!")
+                        txt("\nO rei está ciente do ocorrido.", 0.08)
+                        txt("-'Como você sabe sobre o ovo?!'", 0.08)
+                        txt("-'Nós estamos envolvidos!! A igreja nós deve benefícios.'", 0.08)
+                        txt("-'Nos ofereceu prosperidade perante os demais reinos, entretanto, não cumpriram o trato.'", 0.08)
+                        txt("-'Nosso plano aqui é negociar com Mascariane.'")
+                        txt("-'Não quer se juntar a nós? Você ficará rica também! Talvez possa ter até um reino para você!'")
+                        time.sleep(0.4)
+                        escolhas.append(int(input("Escolhas:\n"
+                                                  "[1].Aceitar proposta.\n"
+                                                  "[2].Não aceitar proposta.\n"
+                                                  "Escolha: ")))
+                        if escolhas[6] == 1:
+                            txt("-'Então está feito! Estaremos juntos nessa conquista jovem Elfo.'", 0.08)
+                            txt("-'O ovo está debaixo da ponte, vá ajudar a defende-lo do padre que está vindo'", 0.08)
+                            time.sleep(0.4)
+                            txt("Chegando lá você se depara com 3 pessoas encapuzadas com o ovo, mas você diz vir a mando do rei.", 0.08)
+                            txt("Em seguida aparece não 1, mas 2 padres. \n"
+                                "-'Devolva-no, ainda não terminaomos.'", 0.08)
+                            txt("Você pega um padre, e os outros pegam o outro.", 0.08)
+                            # Batalha:
+                            # Nome: Padre benel, O caído!
+                            # atb: [700, 60, 100]
+                            txt("-'Nós voltaremos!! Apartir do dia de hoje haverá guerra!!'", 0.08)
+                            time.sleep(0.4)
+                            txt("O rei está repensando no que fez agora. Não consegue ver uma vitória em uma guerra contra a igreja.", 0.08)
+                            txt("Até que.. O rei te pede para ir falar com Mascariane.", 0.08)
+                            txt("-'Já que sua família é próxima a ele a bastante tempo talvez seja mais fácil.'", 0.08)
+                            txt("Não há outro jeito. Se não for talvez seja o fim de Vinicta", 0.08)
+                            time.sleep(0.4)
+                            print()
+                            txt("Chegando lá você é recebido pelos guardas, algo não parece normal.", 0.08)
+                            txt("É dito que os padres que voltaram falaram de um elfo que estava envolvido com um roubo a igreja", 0.08)
+                            txt("Chegando aos pés de Mascariane ele pergunta do porque você estar alí.", 0.08)
+                            txt("Ao falar sobre o acordo não cumprido pela igreja, Mascariane fica furioso.", 0.08)
+                            txt("-'Isso não é da sua conta, um mero pedaço de escória. Você não deveria ter se envolvido com isso.'", 0.08)
+                            txt("-'Joguem-na na masmorra.'", 0.08)
+                            time.sleep(0.5)
+                            print()
+                            txt("No caminho para a masmorra alguém com uma espada e uma coroa estava no caminho.", 0.08)
+                            txt("-'Parem, eu preciso desta Elfa!!'", 0.08)
+                            time.sleep(0.4)
+                            txt("-'Saia do caminho, LIXO.'", 0.08)
+                            time.sleep(0.4)
+                            txt("Uma batalha estava prestes a acontecer!!", 0.08)
+                            txt("O Guerreiro mostrou sua força, mas são muitos guardas reais.", 0.08)
+                            txt("Até que um dos guardas deixa cair a chave de suas algemas", 0.08)
+                            txt("Uma batalha está se iniciando.", 0.08)
+                            time.sleep(0.4)
+                            # Batalha:
+                            # Nome: Guardas
+                            # Atb: [600, 70, 100]
+                            dinheiro += 100
+                            txt("Após derrotar os guardas o guerreiro explica que precisa da sua ajuda para matar Mascariane", 0.08)
+                            txt("-'Infelizmente ele é muito forte, não consigo sozinho. Soube que você está tentando\n"
+                            "mudar a vida da sua família, vamos derrota-lo!!'", 0.08)
+                            time.sleep(0.4)
+                            txt("No caminho tem muitos guardas! Terão que derrotar um por um", 0.08)
+                            # Batalha 1:
+                            # Nome: Guardas Nivelo
+                            # Atb: [450, 50]
+                            dinheiro += 100
+                            txt("\nMais um trio a frente!\n", 0.08)
+                            time.sleep(0.4)
+                            # Batalha 2:
+                            # Nome: Prego na
+                            # Atb: [450, 50]
+                            txt("\nAos poucos vão chegando ao portão da igreja!", 0.08)
+                            txt("Lá encontram um mago que ós ajudou a entrar na igreja, diz ele que quer ajudar o mundo.", 0.08)
+                            txt("Ele os leva até Mascariane.", 0.08)
+                            txt("Lá está ele. Comendo úvas se assusta com a presansa dos 3.", 0.08)
+                            txt("\n-'Viemos matalo, prepare-se', disse o Guerreiro.", 0.08)
+                            txt("-'HA HA HA HA', diz Mascariane.", 0.08)
+                            txt("-'Pois bém, jovens. Podem vir!!'", 0.08)
+                            txt("Uma batalha está prestes a começar.", 0.08)
+                            # Batalha Final:
+                            # Nome: Mascariane
+                            # Atb: [1500, 70]
+                            print()
+                            txt("Após a morte de Mascariane o mundo pode finalmente respirar, estão livres da opressão da igreja.", 0.08)
+                            txt("Vocês 3 se separaram e nunca mais se viram novamente.", 0.08)
+                            txt("O ovo? Quem sabe aonde está?... A paz agora está reinando sobre nós.", 0.08)
+                            txt("Sua família agora pode voltar com suas culturas, evoluírem, voltar a ser o que eram no passado.", 0.08)
+                        
+                        elif escolhas[6] == 2:
+                            txt("-'Infelizmente você fez a escolha errada. Guardas!!'", 0.08)
+                            txt("-'Desculpe Jovem, mas ninguém além de nós pode saber sobre.'", 0.08)
+                            txt("Você é levado para uma prisão, mas no caminho um dos guardas a ajuda a escapar.", 0.08)
+                            txt("Mas vocês tem que se livrar dos guardas atrás de vocês!")
+                            txt("Uma batalha está iniciando.", 0.08)
+                            time.sleep(0.4)
+                            # Batalha:
+                            # Nome: Guardas reais
+                            # ATB: [600, 45]
+                            txt("Você conseguiu derrota-los, mas o guarda que te ajudou não. Então você foge para a floresta.", 0.04)
+                            txt("Ao fugir para a floresta você vê uma carroça coberta.", 0.08)
+                            txt("Ela está repleta de garrafas com água.", 0.08)
+                            txt("Alguém está vindo busca-la.", 0.08)
+                            txt("Em direção norte você nota estar em um território familiar.", 0.08)
+                            txt("Ao chegar descobre ser a Catedral. Voltando a estaca 0", 0.08)
+                            txt("", 0.08)
+                            txt("Indo falar com Mascariane sobre o ovo ele te recompensa. Oferece a salvação de sua família se\n"
+                            "você conseguir recuperar o ovo.")
+                            escolhas.append("Escolhas:\n"
+                                            "[1].Aceitar.\n"
+                                            "[2].Aceitar.\n"
+                                            "Isso não é mais uma brincadeira.\n"
+                                            "Sua escolha: ")
+                            if 1 == escolhas[7] == 2:
+                                txt("\nVocê vai até o rei de Vinicta, mas agora está preparado para uma guerra! Está pronto!", 0.08)
+                                txt("O rei Vinicta se mostra surpreso, mas não recua perante a guerra eminente.", 0.08)
+                                txt("Estão prestes a começar..")
+                                time.sleep(0.4)
+                                # Batalha Final:
+                                # Nome: Vinicta
+                                # Atb: [1200, 60]
+                                txt("Derrotando Vinicta, Mascariane honrra sua palavra.", 0.08)
+                                txt("Os elfos estão oficialmente livres das mãos da catedral. Podem voltar a ser o que quiserem ser!", 0.08)
+                                time.sleep(0.08)
+                                txt("Muito tempo se passou e Mascariane conseguiu dominar vários reinos, mas não chegou mais perto dos Elfos", 0.08)
+                                txt("Tudo está bem, pelo menos por enquanto.", 0.08)
 
                 elif escolhas[3] == 2:
                     print("Voltar aqui!")
                     
             elif escolhas[2] == 2:
-                print("Voltar aqui!")
+                txt("\nAo saír da catedral um mudo aponta para Vinicta.", 0.08)
+                txt("Indo para lá, você se depara com restos de corpos, pilhas. Todos em volta de algo com um ninho.", 0.08)
+                txt("Algo que se parece com um ovo estavalá, mas estava repleto de lobos.", 0.08)
+                txt("Você precisa matar os lobos tocar no ovo.", 0.08)
+                # Batalha:
+                # Nome: Lobos
+                # Atb: [500, 50]
+                txt("Chegando no ovo, ao toca-lo percebe que é falso.", 0.08)
+                txt("Era uma emboscada!!", 0.08)
+                time.sleep(0.4)
+                txt("Você foi capturado e levado ao rei Vinicta", 0.08)
+                txt("-'Quem é você? Está atrás do ovo novamente?'", 0.08)
+                txt("Você nega! Então ele pergunta o porque de você está alí.", 0.08)
+                txt("Ao explicar que está tentando achar o ovo para devolver a Mascariane ele fica furioso.", 0.08)
+                txt("-'Não podemos devolver a mascariane!! Você como qualquer outro deveria saber disso.", 0.08)
+                txt("Eles está tentando extraír a essência pura que este ovo carrega, e com isso se tornar imparável,\n"
+                "nenhum reino conseguirá detelo se conseguir.")
+                txt("Você deve se juntar a nós na jornada de proteger o ovo das mãos de Mascariane'", 0.08)
+                escolhas.append(int(input("Escolhas:\n"
+                                          "[1].Proteger o ovo.\n"
+                                          "[2].Não proteger, mas cuidar dele.\n"
+                                          "Escolhas: ")))
+                time.sleep(0.4)
+                if escolhas[3] == 1:
+                    txt("\n-'Não será nada fácil, Mascariane virá com seu exército, mas faremos o possível para que não passem!'", 0.08)
+                    txt("-'Esteja preparado quando a hora chegar!'", 0.08)
+                    time.sleep(0.6)
+                    txt("Anos depois..", 0.1)
+                    txt("O Exército de Mascariane se aproxima, eles vem para Matar.", 0.08)
+                    txt("Por sorte Vinicta também tem magos poderosos, treinou-os escondidos da igreja.", 0.08)
+                    txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.", 0.08)
+                    txt("Indo em direção ao OVO", 0.08)
+                    txt("Até que vocês dois se encaram frente a frente.", 0.08)
+                    txt("-'Você traíu sua família e a catedral, sua sentença é a morte!!!'", 0.08)
+                    # Batalha:
+                    # Nome: Mascariane
+                    # Atb: [1000, 60]
+                    txt("Ao matar mascariane, seu exército recuou, e logo foi dominado por Vinicta, porém, o rei de Vinicta\n"
+                    "decidiu deixar no poder o antigo herdeiro por direito. O Filho de Mambla que ainda estava vivo,\n"
+                    "mas com a supervisão do rei Vinicta.", 0.08)
+                    txt("Ele revigorou o reino em pouco tempo, mostrou-se ser competente para o cargo.", 0.08)
+                    txt("Após a morte de Mascariane, o a população pode viver agora sem medo! Sem ter a mão dele pairando\n"
+                    "sobre suas cabeças.", 0.08)
+                    txt("Além de recuperar a erança que é o ovo, os Elfos voltaram a desenvolver ovos usando um ritual antigo.", 0.08)
+                    time.sleep(0.4)
+                    txt("2 anos se passaram..")
+                    txt("O mundo parece estar evoluindo, algumas pessoas preserváram a menságem da igreja de ajudar os menos afortunados.", 0.08)
+                    txt("Com o tempo várias igrejas pequenas foram sendo fundadas, mas todas sendo supervisionadas pelo rei do reino que\n"
+                    "cada uma estivesse.", 0.08)
+
+                elif escolhas[3] == 2:
+                    time.sleep(0.6)
+                    txt("\nAo tocar no ovo, você tem uma visão de tortura, talvez fosse o passado do ovo. A tortura constante e agonizante.\n", 0.08)
+                    txt("Mais de 100 anos de tortura são mostrado a você em 5 minutos.")
+                    txt("Anos depois...", 0.08)
+                    txt("Anos depois..", 0.1)
+                    txt("O Exército de Mascariane se aproxima, eles vem para Matar.", 0.08)
+                    txt("Por sorte Vinicta também tem magos poderosos, treinou-os escondidos da igreja.", 0.08)
+                    txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.", 0.08)
+                    txt("Indo em direção ao OVO", 0.08)
+                    txt("Até que vocês dois se encaram frente a frente.", 0.08)
+                    txt("-'Você traíu sua família e a catedral, sua sentença é a morte!!!'", 0.08)
+                    # Batalha Final:
+                    # Nome: Mascariane
+                    # Atb: [1000, 60]
+
+                    txt("\nAo matar mascariane, seu exército recuou, e logo foi dominado por Vinicta, porém, o rei de Vinicta\n"
+                    "decidiu deixar no poder o antigo herdeiro por direito. O Filho de Mambla que ainda estava vivo,\n"
+                    "mas com a supervisão do rei Vinicta.", 0.08)
+                    txt("Ele revigorou o reino em pouco tempo, mostrou-se ser competente para o cargo.", 0.08)
+                    txt("Após a morte de Mascariane, o a população pode viver agora sem medo! Sem ter a mão dele pairando\n"
+                    "sobre suas cabeças.", 0.08)
+                    txt("Além de recuperar a erança que é o ovo, os Elfos voltaram a desenvolver ovos usando um ritual antigo.", 0.08)
+                    time.sleep(0.4)
+                    txt("2 anos se passaram..")
+                    txt("O mundo parece estar evoluindo, algumas pessoas preserváram a menságem da igreja de ajudar os menos afortunados.", 0.08)
+                    txt("Com o tempo várias igrejas pequenas foram sendo fundadas, mas todas sendo supervisionadas pelo rei do reino que\n"
+                    "cada uma estivesse.", 0.08)
+
 
         elif escolhas[1] == 2:
-            print("Voltar aqui")
+            txt("-'Então você estava de butuca?", 0.08)
+            txt("Não basta o desserviço que sua família faz ao reino.", 0.08)
+            txt("Você ouviu informações que levam a morte, Já foi decidido.'", 0.08)
+            txt("[Desmaio]", 0.08)
+            time.sleep(0.5)
+            txt("Na masmorra você sofre constante abusos, assedios e torturas. Tudo para servir de"
+            "experimento para novas magias.", 0.08)
+            txt("Até que um mago escondido nas sombras o salva de sua tortura", 0.08)
+            txt("Ele recrutou mais uma pessoa, um guerreiro.", 0.08)
+            txt("Dizem estar atras da cabeça de Mascariane.", 0.08)
+            txt("-'Ele está no castelo, vamos o atacar enquanto não está repleto de padres feiticeiros.', disse o mago.")
+            txt("Entrando na igreja pelo telhado, vocês se deparam com lobos escuros como a noite.", 0.08)
+            txt("Uma batalha está prestes a começas.")
+            # Batalha:
+            # Nome: Lobos da noite
+            # Atb: [600, 60]
+            dinheiro += 100
+            txt("\nLogo após derrotar o lobo Mascariane aparece batendo palmas.", 0.08)
+            txt("-'Muito bem, muito bem, eu não esperava pro isso.'", 0.08)
+            txt("Ele se prepara para o combate.", 0.08)
+            # batalha final:
+            # Nome: Mascariane
+            # Atb: [1400, 60]
+            dinheiro += 100
+            txt("Ao matar Mascariane o reino foi reconquistado, e agora governado pelo herdeiro do antigo reino Mambla,\n"
+            "o guerreiro da equipe.", 0.08)
+            txt("O mundo finalmente está em paz, não são mais manipulados pela mão de mascariane.", 0.08)
+            txt("Os magos que restaram simplesmente perderam seu poder após a morte de Mascariane. O tornando fracos e\n"
+            "inofencívos.", 0.08)
+            txt("Anos se passaram e a família dos Elfos finalmente conseguiram reestabelecer sua cultura, a cultivação\n"
+            "de ervas, mana e desenvolvimento de ovos de criaturas místicas.", 0.08)
+            txt(f"O novo rei ajuda os Elfos com tudo o que precisam. Diz estar em dívida por {nome_do_jogador} ter ajudado\n"
+            "a derrotar mascariane")
+            txt("FIM!", 0.21)
+
 
 elif class_e_atributos[0] == "Mago":
     print("A ser construída")

@@ -85,7 +85,7 @@ os esforços de Elírio para livrar os pais dessa ilusão, nada resolve-se.
     Então, um dia, enquanto entregava os tapetes pedidos pelo cardeal, ouviu de um dos
 vassalos, que algo da igreja foi roubado e o bispo está louco, disse que queimará vivo o
 ladrão.
-    Elírio entrou em choque, sabia o que era e não era do Bispo de modo algum... Sua vó
+    Elírio entrou em choque, sabia o que era e não era do Bispo de modo algum... Sua avó
 contava que eras atrás em Trozar, que outrora fora um reino majestoso, havia certos
 tesouros, que garantiram o sustento do reino por um tempo, um em especial, era fonte
 da riqueza de Trozar. Só que durante um festival de inverno, o objeto foi roubado e
@@ -105,11 +105,10 @@ personagens = [
     ["Elfo", [110, 90, 100]],
     ["Mago", [90, 100, 110]],
 ]
-class_e_atributos = []
+class_e_atributos = [0]
 escolhas = []
 continuar = "s"
-# Início.
-# while continuar != "n":
+
 print(f"""
 {'-' * 60}
 {'Bem-vindo(a) ao [Nome do jogo]'.center(60)}
@@ -118,7 +117,7 @@ print(f"""
 {"[1]":^20} {"[2]":^20} {"[3]":^20}
 {personagens[0][0]:^20} {personagens[1][0]:^20} {personagens[2][0]:^20}
 {'-' * 60}""")
-class_e_atributos.append(int(input("Sua escolha: ")))
+class_e_atributos[0] = int(input("Sua escolha: "))
 
 # Depis colocar aqui uma verificação de erro.
 

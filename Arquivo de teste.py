@@ -137,8 +137,24 @@ class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_a
 class_e_atributos = [v for v in class_e_atributos[0]]
 
 print(f'{class_e_atributos[1][1] += 5}')'''
+
+'''import time
 def txt(texto, tempo):
     for i in texto:
-        
+        print(i, end=" ")
+        time.sleep(tempo)
 
 txt("Equipe: Jefferson Mangueira Izaquiel Josias Carneiro", 0.2)
+'''
+
+'''print(f"{'-' * 40}\n"
+       f"{'Continuaremos com os esperimentos agora.':^40}\n" 
+       f"{'Sigam o protocolo.':^40}\n"
+       "Pela igreja!\n"
+       f"{'Ass. Bispo Melo':>40}\n"
+       f"{'-'* 40}")'''
+
+
+import time
+time.sleep(0.4)
+print(4)
