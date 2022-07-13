@@ -84,19 +84,38 @@ Escolha o que você vai fazer: '''))
                                     inimigo_atb[0] -= 120 * 0.40
                                 else:
                                     inimigo_atb[0] -= 120 * 0.40
-
                             elif dado == 3:
                                 print(f'{inimigo_nome} recebeu {120 * 0.40} de dano!!!')
-                                inimigo_atb[0] -= 120 * 0.40
+                                if class_e_atributos[0] == "Mago":
+                                    inimigo_atb[0] -= 120 * 0.40
+                                elif class_e_atributos[0] == "Guerreiro":
+                                    inimigo_atb[0] -= 120 * 0.40
+                                else:
+                                    inimigo_atb[0] -= 120 * 0.40
                             elif dado == 4:
                                 print(f'{inimigo_nome} recebeu {120 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 120 * 0.80
+                                if class_e_atributos[0] == "Mago":
+                                    inimigo_atb[0] -= 120 * 0.80
+                                elif class_e_atributos[0] == "Guerreiro":
+                                    inimigo_atb[0] -= 120 * 0.40
+                                else:
+                                    inimigo_atb[0] -= 120 * 0.40
                             elif dado == 5:
                                 print(f'{inimigo_nome} recebeu {120 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 120 * 0.80
+                                if class_e_atributos[0] == "Mago":
+                                    inimigo_atb[0] -= 120 * 0.80
+                                elif class_e_atributos[0] == "Guerreiro":
+                                    inimigo_atb[0] -= 120 * 0.40
+                                else:
+                                    inimigo_atb[0] -= 120 * 0.40
                             elif dado == 6:
                                 print(f'{inimigo_nome} recebeu {120 * 1.00} de dano!!!')
-                                inimigo_atb[0] -= 120 * 1.00
+                                if class_e_atributos[0] == "Mago":
+                                    inimigo_atb[0] -= 120 * 1.00
+                                elif class_e_atributos[0] == "Guerreiro":
+                                    inimigo_atb[0] -= 120 * 0.40
+                                else:
+                                    inimigo_atb[0] -= 120 * 0.40
                             time.sleep(2)
                     elif dado == 5:
                         if atributosbatalha[2] < 60:
