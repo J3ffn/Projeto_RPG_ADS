@@ -13,6 +13,7 @@ def txt(texto, tempo):
         print()
 
 dinheiro = 0
+itens = []
 escolhas = []
 class_e_atributos = [0]
 personagens = [
@@ -61,10 +62,10 @@ Sua escolha: """)))
                                 "Sua escolha: ")))
         # Adicionar verificação de erro à escolha.
         if escolhas[1] == 1:
-            txt("\nDesviando o caminho você encontra um ansião antes do reino.\n", 0.11)
+            txt("\nDesviando o caminho você encontra um ansião antes do reino.\n", 0.08)
             txt("Ele te alerta sobre os perigos eminentes daquela floresta!\n"
-                "Nela há ógros, ursos e lobos terríveis.\n", 0.14)
-            txt("Seguinto em frente você encontra um buraco", 0.13)
+                "Nela há ógros, ursos e lobos terríveis.\n", 0.08)
+            txt("Seguinto em frente você encontra um buraco", 0.08)
             escolhas.append(int(input("Escolhas:"
                                     "[1].Seguir em frente.\n"
                                     "[2].Analisar o buraco.\n"
@@ -78,7 +79,7 @@ Sua escolha: """)))
                 # inimigo_nome = "Lobos"
                 # inimigo_atb = [400, 90] # HP # Força
                 # Luta normal com o código.
-                txt("A noite está chegando e você está exausto.", 0.13)
+                txt("A noite está chegando e você está exausto.", 0.08)
                 escolhas.append(int(input("Escolhas:\n"
                                         "[1].Ascender uma fogueira e descansar.\n"
                                         "[2].Continuar para não encontrar monstros.\n"
@@ -179,17 +180,36 @@ Sua escolha: """)))
 
 
                 elif escolhas[3] == 2:
-                    print("Voltar aqui!")
+                    txt("\nVários olhos te observam na caminhada até Minic. Estão todos imóveis, aparentemente inofensivos.", 0.08)
+                    txt("Até que um lobisomem aparece e parece estar com fome.", 0.08)
+                    txt("Você terá que mata-lo!", 0.08)
+                    # Batalha:
+                    # Nome: Lobisomem
+                    # ATB: [700, 60]
+                    
+                    txt("Ao matar ele você recebe um ítem. 'Presa sedenta' contendo um líquido.", 0.08)
+                    escolhas.append(int(input("Escolhas:\n"
+                                              "[1].Tomar líquido.\n"
+                                              "[2].Não tomar, mas guardar.\n"
+                                              "Sua escolha: ")))
+                    if escolhas[4] == 1:
+                        class_e_atributos[1][0] += 100
+                        class_e_atributos[1][1] += 100
 
+                    elif escolhas[4] == 2:
+                        itens.append("Presa Sedenta")
+                    
+
+                    
             elif escolhas[2] == 2:
-                txt("Era uma armadilha de um urso, sim, um urso apareceu e admitiu.", 0.12)
+                txt("\nEra uma armadilha de um urso, sim, um urso apareceu e admitiu isso.", 0.12)
                 txt("-Urso:\n"
                     "-Você será o nosso almoço de hoje!", 0.14)
                 print("Voltar aqui!")
 
         elif escolhas[1] == 2:
             txt("Você tenta dialogar, mas acaba sendo sequestado\n"
-                "após perceberem que você é o principe.\n", 0.11)
+                "após perceberem que você é o principe.\n", 0.08)
             time.sleep(0.11)
 
             txt("...", 0.5)
@@ -201,7 +221,7 @@ Sua escolha: """)))
             txt(f"MORTE!\n"
                 f"{nome_do_jogador}\n"
                 "MORTE!\n"
-                f"{nome_do_jogador}, acorde!\n", 0.11)
+                f"{nome_do_jogador}, acorde!\n", 0.08)
 
             txt("Uma lâmina está sendo afiada.\n"
                 "Mas por estar encapuzado não consegue ver muita coisa!\n", 0.11)
@@ -973,7 +993,7 @@ elif class_e_atributos[0] == "Elfo":
 
 
 elif class_e_atributos[0] == "Mago":
-    print("A ser construída")
+    print("A terminar")
 
 txt("Equipe:\n"
 "Jefferson Mangueira Izaquiel;\n" 

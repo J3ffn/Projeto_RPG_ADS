@@ -155,6 +155,10 @@ txt("Equipe: Jefferson Mangueira Izaquiel Josias Carneiro", 0.2)
        f"{'-'* 40}")'''
 
 
-import time
-time.sleep(0.4)
-print(4)
+class_e_atributos = [input("Número: ")]
+while class_e_atributos[0].isnumeric is False:
+    try:
+        if 2 = class_e_atributos[0] == 1:
+            
+
+    except:
