@@ -1,9 +1,10 @@
 import time
 import random
+import pygame
+
+pygame.init()
 
 def combate(inimigo_atb, inimigo_nome, final):
-    finalizar = 1
-    while finalizar != 0:
         atributosbatalha = class_e_atributos[1][:]
         while inimigo_atb[0] > 0 and atributosbatalha[0] > 0:
             print('-' * 40)
@@ -66,7 +67,7 @@ Escolha o que você vai fazer: '''))
                             print('Você não tem mana o suficiente para dar esse golpe!')
                             time.sleep(2)
                         else:
-                            atributosbatalha[2] -= 40
+                            atributosbatalha[2] -= 25
                             print(f'Você usou {class_e_atributos[2][1]}')
                             time.sleep(1)
                             dado = random.randint(1, 6)
@@ -77,45 +78,20 @@ Escolha o que você vai fazer: '''))
                             if dado == 1:
                                 print(f'{inimigo_nome} se desviou do golpe!')
                             elif dado == 2:
-                                print(f'{inimigo_nome} recebeu {120 * 0.40} de dano!!!')
-                                if class_e_atributos[0] == "Mago":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                elif class_e_atributos[0] == "Guerreiro":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                else:
-                                    inimigo_atb[0] -= 120 * 0.40
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.20) + 5} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.20) + 5
                             elif dado == 3:
-                                print(f'{inimigo_nome} recebeu {120 * 0.40} de dano!!!')
-                                if class_e_atributos[0] == "Mago":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                elif class_e_atributos[0] == "Guerreiro":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                else:
-                                    inimigo_atb[0] -= 120 * 0.40
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.40) + 10} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.40) + 10
                             elif dado == 4:
-                                print(f'{inimigo_nome} recebeu {120 * 0.80} de dano!!!')
-                                if class_e_atributos[0] == "Mago":
-                                    inimigo_atb[0] -= 120 * 0.80
-                                elif class_e_atributos[0] == "Guerreiro":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                else:
-                                    inimigo_atb[0] -= 120 * 0.40
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.60) + 15} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.60) + 15
                             elif dado == 5:
-                                print(f'{inimigo_nome} recebeu {120 * 0.80} de dano!!!')
-                                if class_e_atributos[0] == "Mago":
-                                    inimigo_atb[0] -= 120 * 0.80
-                                elif class_e_atributos[0] == "Guerreiro":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                else:
-                                    inimigo_atb[0] -= 120 * 0.40
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.80) + 20} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.80) + 20
                             elif dado == 6:
-                                print(f'{inimigo_nome} recebeu {120 * 1.00} de dano!!!')
-                                if class_e_atributos[0] == "Mago":
-                                    inimigo_atb[0] -= 120 * 1.00
-                                elif class_e_atributos[0] == "Guerreiro":
-                                    inimigo_atb[0] -= 120 * 0.40
-                                else:
-                                    inimigo_atb[0] -= 120 * 0.40
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 1.00) + 25} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 1.00) + 25
                             time.sleep(2)
                     elif dado == 5:
                         if atributosbatalha[2] < 60:
@@ -133,20 +109,20 @@ Escolha o que você vai fazer: '''))
                             if dado == 1:
                                 print(f'{inimigo_nome} se desviou do golpe!')
                             elif dado == 2:
-                                print(f'{inimigo_nome} recebeu {140 * 0.60} de dano!!!')
-                                inimigo_atb[0] -= 140 * 0.60
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.60) + 30} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.60) + 30
                             elif dado == 3:
-                                print(f'{inimigo_nome} recebeu {140 * 0.60} de dano!!!')
-                                inimigo_atb[0] -= 140 * 0.60
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.60) + 35} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.60) + 35
                             elif dado == 4:
-                                print(f'{inimigo_nome} recebeu {140 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 140 * 0.80
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.80) + 40} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.80) + 40
                             elif dado == 5:
-                                print(f'{inimigo_nome} recebeu {140 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 140 * 0.80
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.80) + 45} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.80) + 45
                             elif dado == 6:
-                                print(f'{inimigo_nome} recebeu {140 * 1.00} de dano!!!')
-                                inimigo_atb[0] -= 140 * 1.00
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 1.00) + 50} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 1.00) + 50
                             time.sleep(2)
                     elif dado == 6:
                         if atributosbatalha[2] < 80:
@@ -164,20 +140,20 @@ Escolha o que você vai fazer: '''))
                             if dado == 1:
                                 print(f'{inimigo_nome} se desviou do golpe!')
                             elif dado == 2:
-                                print(f'{inimigo_nome} recebeu {160 * 0.60} de dano!!!')
-                                inimigo_atb[0] -= 160 * 0.60
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.60) + 55} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.60) + 55
                             elif dado == 3:
-                                print(f'{inimigo_nome} recebeu {160 * 0.60} de dano!!!')
-                                inimigo_atb[0] -= 160 * 0.60
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.80) + 60} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.80) + 60
                             elif dado == 4:
-                                print(f'{inimigo_nome} recebeu {160 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 160 * 0.80
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.80) + 65} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.80) + 65
                             elif dado == 5:
-                                print(f'{inimigo_nome} recebeu {160 * 0.80} de dano!!!')
-                                inimigo_atb[0] -= 160 * 0.80
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 0.90) + 70} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 0.90) + 70
                             elif dado == 6:
-                                print(f'{inimigo_nome} recebeu {160 * 1.00} de dano!!!')
-                                inimigo_atb[0] -= 160 * 1.00
+                                print(f'{inimigo_nome} recebeu {(class_e_atributos[1][1] * 1.00) + 75} de dano!!!')
+                                inimigo_atb[0] -= (class_e_atributos[1][1] * 1.00) + 75
                             time.sleep(2)
 
                     if final == 'onelfa':
@@ -231,22 +207,31 @@ Escolha o que você vai fazer: '''))
 
 
             elif opcoes == 2:
-                opcoesesp = int(input(f'''{'-' * 40}
+                if class_e_atributos[0] == 'Mago':
+                    opcoesesp = int(input(f'''{'-' * 40}
         1-> Cura      N-> Voltar
 {'-' * 40}
 Escolha um especial ou clique em outro qualquer número para voltar: '''))
-                if opcoesesp == 1:
-                    if atributosbatalha[2] >= 60:
-                        atributosbatalha[2] -= 60
-                        atributosbatalha[0] += 60
-                        if atributosbatalha[0] > class_e_atributos[1][0]:
-                            atributosbatalha[0] = class_e_atributos[1][0]
-                        print(f'Sua vida agora é {atributosbatalha[0]}')
+                    if opcoesesp == 1:
+                        if atributosbatalha[2] >= 60 and atributosbatalha[0] < class_e_atributos[1][0]:
+                            atributosbatalha[2] -= 60
+                            atributosbatalha[0] += 60
+                            if atributosbatalha[0] > class_e_atributos[1][0]:
+                                atributosbatalha[0] = class_e_atributos[1][0]
+                            print(f'Sua vida agora é {atributosbatalha[0]}')
+                        elif atributosbatalha[0] == class_e_atributos[1][0]:
+                            print('Você está com a vida cheia')
+                            continue
+                        elif atributosbatalha[2] < 60:
+                            print('Você está sem mana para seu especial!')
+                            continue
                     else:
-                        print('Você não tem mana o suficiente para usar seu especial!')
                         continue
-                else:
-                    continue
+                elif class_e_atributos[0] == 'Guerreiro':
+                    opcoesesp = int(input(f'''{'-' * 40}
+        1-> Cura      N-> Voltar
+{'-' * 40}
+Escolha um especial ou clique em outro qualquer número para voltar: '''))
 
 
             elif opcoes == 3:
@@ -399,18 +384,8 @@ Escolha um dos atributos para aumentar 2 pontos: '''))
         if atributosbatalha[0] <= 0:
             print('\033[1;40;31mQue pena, você perdeu.\033[m')
 
-        if class_e_atributos[1][0] <= 0:
-            finalizar = int(input("Você quer continuar?\n"
-                                  "[1].Para reiniciar batalha.\n"
-                                  "[2].Para finalizar o jogo."))
-            print("Reiniciando combate!")
-            time.sleep(0.4)
-
-        elif inimigo_atb[0] <= 0:
-            finalizar = 0
-
 personagens = [
-    ["Guerreiro", [100, 0, 90], ["??????", "Corte Vertical", "Espada sagrada", "??????"]],
+    ["Guerreiro", [100, 0, 90], ["Soco Dinâmico", "Corte Vertical", "Espada secreta", "Espada Sagrada"]],
     ["Elfo", [110, 90, 100], ["Flecha rápida", "Flecha explosiva", "Flecha da Fé", "Chuva de flechas"]],
     ["Mago", [90, 100, 110], ["Feitiço", "Sabor Veneno", "Bola sombria", "Onda infernal"]],
 ]
@@ -421,5 +396,7 @@ class_e_atributos = [i for i in personagens if personagens.index(i) == class_e_a
 class_e_atributos = [v for v in class_e_atributos[0]]
 
 itens = [['Poção de cura M', 'Poção de cura G', 'Poção de mana M', 'Poção de mana G'], [1, 1, 1, 1]]
+music_mascariane = pygame.mixer.music.load('Musiquinha de mascariane.mp3')
+pygame.mixer.music.play(-1)
 combate([2000, 500], 'Mascariane', 'off')
 print(class_e_atributos[1])
