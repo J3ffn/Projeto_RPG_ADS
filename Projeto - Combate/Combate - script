@@ -1,1 +1,65 @@
+-Idéias:
+Contador de rodadas
+Contador para limitar certas habilidades por determinada quantidade de turnos
 
+Ataque normal no dado:
+1- Dá um golpe crítico
+2- Dá um golpe normal com dano normal
+3- Dá um golpe normal com dano normal
+4- Dá um golpe com o dano pela metade
+5- Erra o golpe
+6- Erra o golpe e se acerta causando o próprio dano pela metade em si
+mesmo
+
+Habilidades:
+Arqueiro – Chuva de Flechas, Flecha da Fé e Agilidade (Especial)
+Guerreiro – Corte vertical, Espada sagrada, e Fúria (Especial)
+Mago – Bola de fogo, Sabor Veneno e Cura (Especial)
+
+Guerreiro:              INIMIGO - Danotomado:
+1 = Corte vertical   | Não recebe dano
+2 = Corte vertical   | 70% do dano
+3 = Corte vertical   | 60% do dano
+4 = Espada sagrada   | 80% do dano
+5 = Espada sagrada   | 90% do dano
+6 = Espada sagrada   | 100% do dano
+Especial (Fúria) é selecionável consumindo 80 de mana.
+
+Arqueira:               INIMIGO - Dano tomado:
+1 = Chuva de flechas | Não recebe dano
+2 = Chuva de flechas | 70% do dano
+3 = Chuva de flechas | 60% do dano
+4 = flecha da fé     | 60% do dano
+5 = flecha da fé     | 70% do dano
+6 = flecha da fé     | 100% do dano
+Especial (Agilidade) é selecionável consumindo 70 de mana.
+
+Mago:                   INIMIGO - Dano tomado:
+1 = Bola de fogo     | Não recebe dano
+2 = Bola de fogo     | 70% do dano
+3 = Bola de fogo     | 60% do dano
+4 = Sabor veneno     | 60% do dano
+5 = Sabor veneno     | 70% do dano
+6 = Sabor veneno     | 100% do dano
+Especial (Cura) é selecionável consumindo 60 de mana.
+
+
+Sistema de Defesa, itens e fugir de batalha:
+
+Defesa
+1- Defende
+2- Defende
+3- Defende
+4- Defende, mas se fere um pouco
+5- Defende, mas se fere um pouco
+6- Não se defende
+
+Itens (Se tiver)
+Poção pequena – Cura 20% da vida
+Poção média – Cura 40% da vida
+Poção grande – Cura 60% da vida
+
+Atributos:
+Mago - [90, 100, 110]
+Guerreiro - [100, 110, 90]
+Arqueira - [110, 90, 100]
