@@ -264,7 +264,7 @@ Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
                 elif class_e_atributos[0] == 'Guerreiro':
                     opcoesesp = ver(input(f'''{'-' * 40}
         1-> Fúria      2-> Voltar
-    {'-' * 40}
+{'-' * 40}
     Escolha um especial ou clique em outro qualquer número para voltar: '''), ["1", "2"])
                     if opcoesesp == 1:
                         if atributosbatalha[2] >= 80:
@@ -453,13 +453,15 @@ Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
     Escolha um dos atributos para aumentar 2 pontos: '''), ["1", "2", "3"])
             time.sleep(1)
             if opcoes == 1:
-                class_e_atributos[1][0] += 2
-                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
+                atributosbatalha[0] = class_e_atributos[1][0] + 20
+                print(f'Seus atributos ficaram assim: {atributosbatalha[1]}\n')
             elif opcoes == 2:
-                class_e_atributos[1][1] += 2
-                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
+                atributosbatalha[1] = class_e_atributos[1][1] + 20
+                print(f'Seus atributos ficaram assim: {atributosbatalha[1]}\n')
             elif opcoes == 3:
-                class_e_atributos[1][2] += 2
-                print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
+                atributosbatalha[2] = class_e_atributos[1][2] + 20
+                print(f'Seus atributos ficaram assim: {atributosbatalha[1]}\n')
         if atributosbatalha[0] <= 0:
             print('\033[1;40;31mQue pena, você perdeu.\033[m')
+        class_e_atributos = atributosbatalha
+        return class_e_atributos

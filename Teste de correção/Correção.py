@@ -3,8 +3,10 @@
 import os
 import time
 import pygame
+
 pygame.init()
 from combate import Batalha
+
 ####################
 '''pygame.mixer.music.load('SONS/Contemplem_o_Magooo.mp3')
 pygame.mixer.music.play()
@@ -26,6 +28,7 @@ Opção 2(Especial):.....Cada classe possui um especial único, que é explicado
 Opção 3(Itens):........Aqui terá poções de cura e mana, mas a quantidade varia por classe.
 Opção 4(Pular rodada):.Você pode pular a rodada para recuperar mana.
 {'-' * 98}""")
+
 
 # time.sleep(20)
 
@@ -275,7 +278,8 @@ Sua escolha: """), ["1", "2"]))
                             txt("Logo começará uma batalha entre os dois, mas Mascariane "
                                 "não quer usar a magia.", 0.05)
                             # Batalha 1:
-                            combate.combate([1400, 60], 'Mascariane', 'onbreak', class_e_atributos, itens)  # Voltar para parar
+                            combate.combate([1400, 60], 'Mascariane', 'onbreak', class_e_atributos,
+                                            itens)  # Voltar para parar
                             # inimigo_nome = "Mascariane"
                             # inimigo_atb = [800, 100]
                             # Fazer o código parar no meio da batalha.
@@ -285,7 +289,8 @@ Sua escolha: """), ["1", "2"]))
                                 "atrás dos outros.", 0.05)
                             txt("Iniciando combate...", 0.05)
                             # Batalha 2:
-                            combate.combate([1400, 60], 'Mascariane', 'onbreak', class_e_atributos, itens)  # Voltar para parar
+                            combate.combate([1400, 60], 'Mascariane', 'onbreak', class_e_atributos,
+                                            itens)  # Voltar para parar
                             # inimigo_nome = "Mascariane"
                             # inimigo_atb = [2000, 100]
                             # Fazer o código parar no meio da batalha, na quase morte do jogador.
@@ -293,7 +298,8 @@ Sua escolha: """), ["1", "2"]))
                                 "Eis que aparece um mago, aprendiz,"
                                 "mas mostrou ser poderoso.\n", 0.05)
                             # Batalha Final:
-                            combate.combate([1400, 60], 'Mascariane', 'off', class_e_atributos, itens) # Falar com josias, pq aqui são 3 pessoas.
+                            combate.combate([1400, 60], 'Mascariane', 'off', class_e_atributos,
+                                            itens)  # Falar com josias, pq aqui são 3 pessoas.
                             # inimigo_nome = "Mascariane"
                             # inimigo_atb = [2000, 100]
                             txt("Após a derrota de Mascariane, todos os magos presentes começaram\n"
@@ -350,7 +356,7 @@ Sua escolha: """), ["1", "2"]))
                     txt("Está com a perna quebrada.", 0.05)
                     txt("-Urso:\n"
                         "-Você será o nosso almoço de hoje!", 0.08)
-                    escolhas.append(ver(input(f"{'-'* 60}\n"
+                    escolhas.append(ver(input(f"{'-' * 60}\n"
                                               "[1].Lutar com urso.\n"
                                               "[2].Aceitar amorte.\n"
                                               "Sua escolha: "), ["1", "2"]))
@@ -809,7 +815,8 @@ Nomismas: {dinheiro}
                             time.sleep(0.4)
                             txt("mas Mascariane não concordou com isso, ele odiava quando eu estava perto dela, então, revolveu\n"
                                 "me afastar, me jogar aos menos afortunados, mas sua avó me ajudou a fugir, só que na fuga acabei\n"
-                                "com a perna dessecada. Me colocou aqui onde estou até hoje. Devo minha vida a ela.\n", 0.06)
+                                "com a perna dessecada. Me colocou aqui onde estou até hoje. Devo minha vida a ela.\n",
+                                0.06)
                             txt("Agora vá, você deve ir! Siga seu destino!", 0.05)
 
                             time.sleep(0.3)
@@ -914,8 +921,10 @@ Nomismas: {dinheiro}
                                         combate.combate([1400, 60], 'Mascariane', 'off', class_e_atributos, itens)
                                         # Nome: Mascariane
                                         # ATB: [1400, 70, 150]
-                                        txt("Com Mascariane derrotado, você livrou sua família do trabalho miserável dele e se tornou o novo rei da catedral!", 0.05)
-                                        txt("Podendo dar uma vida melhor para a sua família e acabar com a desgraça que a catedral fazia com os outros.", 0.05)
+                                        txt("Com Mascariane derrotado, você livrou sua família do trabalho miserável dele e se tornou o novo rei da catedral!",
+                                            0.05)
+                                        txt("Podendo dar uma vida melhor para a sua família e acabar com a desgraça que a catedral fazia com os outros.",
+                                            0.05)
                                         txt("\nGoverne bem, seja melhor do que mascariane foi!", 0.05)
                                         time.sleep(0.4)
                                         txt("Sua avó ficaria orgulhosa!", 0.08)
@@ -927,7 +936,8 @@ Nomismas: {dinheiro}
                                                                 "Sua escolha: "), ["1", "2"])
 
                                 elif escolhas[-1] == 2:
-                                    txt("\n Ao entrar em uma rua é surpreendido por 3 pessoas encapuzadas, com um tendo uma tatuágem de cruz.", 0.05)
+                                    txt("\n Ao entrar em uma rua é surpreendido por 3 pessoas encapuzadas, com um tendo uma tatuágem de cruz.",
+                                        0.05)
                                     txt("Uma batalha se inicia.", 0.05)
                                     # Batalha
                                     combate.combate([600, 50], 'Cabeça de prego', 'off', class_e_atributos, itens)
@@ -935,8 +945,10 @@ Nomismas: {dinheiro}
                                     # Atbt: [600, 50, 100]
                                     dinheiro += 100
                                     time.sleep(0.3)
-                                    txt("Um deles tinha uma carta com uma localização, e por incrível que pareça era do ovo.", 0.05)
-                                    txt("Você vai até a localização mas o ovo não está mais lá, apénas marcas de cinzas no chão", 0.05)
+                                    txt("Um deles tinha uma carta com uma localização, e por incrível que pareça era do ovo.",
+                                        0.05)
+                                    txt("Você vai até a localização mas o ovo não está mais lá, apénas marcas de cinzas no chão",
+                                        0.05)
                                     txt("Deixaram um pergaminho para tráz, nele dizia:", 0.05)
                                     print(f"{'-' * 60}\n"
                                           f"{'Continuaremos com os esperimentos agora.':^40}\n"
@@ -948,8 +960,10 @@ Nomismas: {dinheiro}
                                     time.sleep(0.6)
                                     txt("Enfurecido, você vai direto mara a Catedral", 0.05)
                                     time.sleep(0.1)
-                                    txt("Um guerreiro estava lá, mas conversando o guerreiro revela que também está atráz de Mascariane, só que para matalo.", 0.05)
-                                    txt("Sem exitar você se junta a ele na jornada até que uma mulher grávida fala sobre experimentos dentro de uma masmorra.", 0.05)
+                                    txt("Um guerreiro estava lá, mas conversando o guerreiro revela que também está atráz de Mascariane, só que para matalo.",
+                                        0.05)
+                                    txt("Sem exitar você se junta a ele na jornada até que uma mulher grávida fala sobre experimentos dentro de uma masmorra.",
+                                        0.05)
                                     escolhas.append(ver(input(f"\n{'-' * 60}\n"
                                                               "Escolhas:\n"
                                                               "[1].Ir para Masmorra\n"
@@ -959,7 +973,8 @@ Nomismas: {dinheiro}
                                     if escolhas[-1] == 1:
                                         txt("\nEra uma pessagem atrás da igreja, bem escondida!", 0.05)
                                         txt("Entrando lá, várias pessoas estavam enjauladas, várias multiladas, órgãos estavam jogados sobre uma mesa.\n"
-                                            "Aparentemante não havia ninguém alí, mas descendo mais 4 magos são avistados, e..", 0.05)
+                                            "Aparentemante não havia ninguém alí, mas descendo mais 4 magos são avistados, e..",
+                                            0.05)
                                         txt("Lá está! O ovo, dentro de algo com.. água?!", 0.05)
                                         escolhas.append(ver(input(f"\n{'-' * 60}\n"
                                                                   "Escolhas:\n"
@@ -1006,8 +1021,10 @@ Nomismas: {dinheiro}
                                             txt("Após a morte de mascariane, Vinicta agora está em paz, podendo seguir com sua cultura local e não ficando mais\n"
                                                 "dependente de Mascariane", 0.05)
                                             txt(f"Após matar Mascariane, {nome_do_jogador}", 0.05)
-                                            txt("Se mudou com sua família para algum reino ao norte para poder cuidar do YETI, que consequentemente é a sua cultura.", 0.05)
-                                            txt("Nunca mais voltando para o Vinicta ou a antiga Catedral que agora é Mambla", 0.05)
+                                            txt("Se mudou com sua família para algum reino ao norte para poder cuidar do YETI, que consequentemente é a sua cultura.",
+                                                0.05)
+                                            txt("Nunca mais voltando para o Vinicta ou a antiga Catedral que agora é Mambla",
+                                                0.05)
                                             escolhas.append(10)
                                             fechar_jogo = ver(input(f"\n{'-' * 60}\n"
                                                                     "Escolhas:\n"
@@ -1172,7 +1189,8 @@ Nomismas: {dinheiro}
                                 # Nome: Guardas
                                 # Atb: [600, 70, 100]
                                 dinheiro += 100
-                                txt("Após derrotar os guardas o guerreiro explica que precisa da sua ajuda para matar Mascariane", 0.08)
+                                txt("Após derrotar os guardas o guerreiro explica que precisa da sua ajuda para matar Mascariane",
+                                    0.08)
                                 txt("-'Infelizmente ele é muito forte, não consigo sozinho. Soube que você está tentando\n"
                                     "mudar a vida da sua família, vamos derrota-lo!!'", 0.05)
                                 time.sleep(0.4)
@@ -1227,7 +1245,8 @@ Nomismas: {dinheiro}
                                 combate.combate([600, 50], 'Guardas reais', 'off', class_e_atributos, itens)
                                 # Nome: Guardas reais
                                 # ATB: [600, 50]
-                                txt("Você conseguiu derrota-los, mas o guarda que te ajudou não. Então você foge para a floresta.", 0.04)
+                                txt("Você conseguiu derrota-los, mas o guarda que te ajudou não. Então você foge para a floresta.",
+                                    0.04)
                                 txt("Ao fugir para a floresta você vê uma carroça coberta.", 0.05)
                                 txt("Ela está repleta de garrafas com água.", 0.05)
                                 txt("Alguém está vindo busca-la.", 0.05)
@@ -1243,8 +1262,10 @@ Nomismas: {dinheiro}
                                                           "Isso não é mais uma brincadeira!\n"
                                                           "Sua escolha: "), ["1", "2"]))
                                 if 1 == escolhas[-1] == 2:
-                                    txt("\nVocê vai até o rei de Vinicta, mas agora está preparado para uma guerra! Está pronto!", 0.05)
-                                    txt("O rei Vinicta se mostra surpreso, mas não recua perante a guerra eminente.", 0.05)
+                                    txt("\nVocê vai até o rei de Vinicta, mas agora está preparado para uma guerra! Está pronto!",
+                                        0.05)
+                                    txt("O rei Vinicta se mostra surpreso, mas não recua perante a guerra eminente.",
+                                        0.05)
                                     txt("Estão prestes a começar..", 0.05)
                                     time.sleep(0.4)
                                     # Batalha Final:
@@ -1252,9 +1273,11 @@ Nomismas: {dinheiro}
                                     # Nome: Vinicta
                                     # Atb: [1200, 60]
                                     txt("Derrotando Vinicta, Mascariane honrra sua palavra.", 0.05)
-                                    txt("Os elfos estão oficialmente livres das mãos da catedral. Podem voltar a ser o que quiserem ser!", 0.05)
+                                    txt("Os elfos estão oficialmente livres das mãos da catedral. Podem voltar a ser o que quiserem ser!",
+                                        0.05)
                                     time.sleep(0.08)
-                                    txt("Muito tempo se passou e Mascariane conseguiu dominar vários reinos, mas não chegou mais perto dos Elfos", 0.05)
+                                    txt("Muito tempo se passou e Mascariane conseguiu dominar vários reinos, mas não chegou mais perto dos Elfos",
+                                        0.05)
                                     txt("Tudo está bem, pelo menos por enquanto.", 0.05)
                                     escolhas.append(10)
                                     fechar_jogo = ver(input(f"\n{'-' * 60}\n"
@@ -1263,7 +1286,8 @@ Nomismas: {dinheiro}
                                                             "[2].Fechar jogo.\n"
                                                             "Sua escolha: "), ["1", "2"])
                     elif escolhas[-1] == 2:
-                        txt("Ao saír do bar, um bêbado está te esperando junto aos padres, ele tinha te dedurado.", 0.05)
+                        txt("Ao saír do bar, um bêbado está te esperando junto aos padres, ele tinha te dedurado.",
+                            0.05)
                         txt("Você é capturado e levado para o foço da morte.", 0.05)
                         time.sleep(0.3)
                         txt(f"Apartir daquele dia ninguém nunca mais viu {nome_do_jogador}", 0.05)
@@ -1308,7 +1332,8 @@ Nomismas: {dinheiro}
                         txt("Anos depois..", 0.08)
                         txt("O Exército de Mascariane se aproxima, eles vem para Matar.", 0.05)
                         txt("Por sorte Vinicta também tem magos poderosos, treinou-os escondidos da igreja.", 0.05)
-                        txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.", 0.08)
+                        txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.",
+                            0.08)
                         txt("Indo em direção ao OVO", 0.05)
                         txt("Até que vocês dois se encaram frente a frente.", 0.05)
                         txt("-'Você traíu sua família e a catedral, sua sentença é a morte!!!'", 0.05)
@@ -1345,7 +1370,8 @@ Nomismas: {dinheiro}
                         txt("Anos depois..", 0.08)
                         txt("O Exército de Mascariane se aproxima, eles vem para Matar.", 0.05)
                         txt("Por sorte Vinicta também tem magos poderosos, treinou-os escondidos da igreja.", 0.05)
-                        txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.", 0.05)
+                        txt("Conseguem segurar o exército, mas não conseguem segurar Mascariane, ele conseguiu entrar.",
+                            0.05)
                         txt("Indo em direção ao OVO", 0.05)
                         txt("Até que vocês dois se encaram frente a frente.", 0.05)
                         txt("-'Você traíu sua família e a catedral, sua sentença é a morte!!!'", 0.05)
@@ -1421,7 +1447,7 @@ Nomismas: {dinheiro}
                                         "Sua escolha: "), ["1", "2"])
 
     elif class_e_atributos[0] == "Mago":
-        escolhas.append(ver(input("Deseja ver a lore do personágem?\n"
+        escolhas.append(ver(input("\nDeseja ver a lore do personágem?\n"
                                   "[1].Sim.\n"
                                   "[2].Não.\n"
                                   "Sua escolha: "), ["1", "2"]))
@@ -1429,13 +1455,96 @@ Nomismas: {dinheiro}
             txt("História aqui!", 0.05)
         escolhas.pop()
 
-        print("A terminar")
+        txt(f'O reino Elgalor um reino distante e cheio de magia ', 0.05)
+        txt(f'formado por mestres supremos da magia.', 0.05)
+        txt(f'Numa manhã onde o sol encontrava o céu o rei anuncia o nascimento do seu filho {nome_do_jogador} ', 0.05)
+        txt(f'a primeira criança da linhagem a não ter poderes, {nome_do_jogador} ', 0.05)
+        txt(f'era um menino um tanto diferente e em sua testa havia uma marca, ', 0.05)
+        txt(f'um símbolo de nascença muitas achavam que era uma marca de maldição, ', 0.05)
+        txt(f'outros apenas algo comum mas sua mãe a rainha artemis sabia o peso que aquela marca carregava, ', 0.05)
+        txt(f'{nome_do_jogador} havia sido o escolhido o mais forte entres os magos.', 0.05)
+        txt(f'Certo dia a treinar na companhia de seus pais Elgalor foi atacada, ventos e terremotos mexiam o reino.',
+            0.05)
+        txt(f'O grande céu que estava o sol, agora era um mar de escurecimento nada se via, só ouvia gritos.', 0.05)
+        txt(f'então seus pais esconderam {nome_do_jogador} e foi ordenado que só saísse quando estivesse seguro e sem\n'
+            'barulho.', 0.08)
+        txt(f'-O que será que está acontecendo?, disse a rainha Artemis', 0.05)
+        txt(f'-O REINO ESTÁ SENDO ATACADO!, disse o soldado', 0.05)
+        txt(f'-Não acredito, quem faria uma barbárie dessas?, o rei Taldo falou', 0.05)
+        txt(f'O soldado falou que não sabe quem está atacando', 0.05)
+        txt(f'Iremos ver o que está acontecendo, mas primeiro escondam {nome_do_jogador} no armário', 0.05)
+        txt(f'Antes de sair, a rainha Artemis se agachou-se na frente do seu filho e o fez prometer que só sairia\n'
+            'quando tudo estivesse calmo',
+            0.05)
+        txt(f'O rei e a rainha então foram para fora do castelo ver o que estava acontecendo, {nome_do_jogador} ficou\n'
+            f'encolhido assim como sua mãe lhe pediu.', 0.05)
+        txt(f'Eles foram ajudar o povo, mas tudo se cobriu em uma névoa escura onde eles não enxergavam nada, só ouviam\n'
+            f'gritos.', 0.05)
+        txt(f'Quebra de tempo', 0.05)
+        txt(f'{nome_do_jogador} pensou em sair do armário', 0.05)
+        escolhas.append(ver(input(f"\n{'-' * 60}\n"
+                                  "Escolhas:\n"
+                                  "[1].Não Sair.\n"
+                                  "[2].Sair.\n"
+                                  "Sua escolha: "), ["1", "2"]))
+        if escolhas[0] == 1:
+            txt('O pequeno mago não saiu e obedeceu seus pais!', 0.05)
+            txt('Um tempo depois escondido naquele armário o pequeno príncipe saiu e ja se via o sol no céu, ao\n'
+                'atravessar', 0.05)
+            txt(f'as grandes muralhas {nome_do_jogador} e ao olhar mas a frente encontrou sua mãe e uma chave em sua\n'
+                f'mão', 0.05)
+            txt(f'ao procurar seu pai e mais pessoas nada ele encontrou só destruição, sangue e um símbolo que cobria o\n'
+                f'céu.', 0.05)
+            txt(f'{nome_do_jogador} pensa se vai ou não pegar a chave da mãe', 0.05)
+            escolhas.append(ver(input(f"\n{'-' * 60}\n"
+                                      "Escolhas:\n"
+                                      "[1].Pegar a chave.\n"
+                                      "[2].Não pegar a chave.\n"
+                                      "Sua escolha: "), ["1", "2"]))
+            if escolhas[1] == 1:
+                txt('ele abaixou se e pegou a chave e uma luz saiu dela o guiando para dentro da floresta, lá havia\n'
+                    'uma árvore com uma fechadura, ele pensou e enfiou a chave,', 0.05)
+                txt('logo um livro caiu em suas mãos e uma magia rodou então sentiu algo tomando o corpo dele, como se\n'
+                    'algo tivesse sido despertado e fluisse no sangue dele, na capa do livro estava escrito algo, " use\n'
+                    'com sabedoria e você sempre vai ser o melhor meu filho."', 0.05)
+                txt('Ele escutou passos e quando viu estava com redor cheio de soldados que serviam a igreja.', 0.05)
+                # batalha
+                txt(f'Quando assim {nome_do_jogador} venceu o papa desceu e viu que o menino tinha força, só não sabia que\n'
+                    f'a sua frente estava o príncipe, então ordenou que ele fosse levado ', 0.05)
+                txt('junto com os plebeus do reino para ser treinado pelo Papa e se torna um próximo soldado. ', 0.05)
+                txt('A igreja pregava que odiava magias mas por trás das cortinas sempre estava lá treinando e armando seus\n'
+                    'soldados com magia.', 0.05)
+                txt(f'{nome_do_jogador} começou a treinar seus poderes e liberar eles de forma constante, mas ele nunca\n'
+                    f'parava de pensar sua vingança. chegou o dia de um desafio  feito para saber quem subiria de cargo e\n'
+                    f'teria um lugar melhor {nome_do_jogador} ', 0.05)
+                txt('não podia participar mas um dos rapazes próximos que observa ele disse que ele tinha o talento\n'
+                    'necessário para passar pelo labirinto', 0.05)
+                txt(f'a regra era clara o único objetivo de {nome_do_jogador} era  correr pelo labirinto e achar o objeto\n'
+                    f'perdido', 0.05)
+                txt('Correndo para fora do labirinto ele se depara percebendo que só ele e outra pessoa conseguiram escapar\n'
+                    'do grande desafio, ao olhar para o lado, ', 0.05)
+                txt('ele vê uma elfa carregando um arco em suas costas ele nunca tinha visto alguém tão bonita quanto ela,\n'
+                    'mesmo com alguns arranhões e marcas ela ainda era encantadora, ', 0.05)
+                txt('Uma multidão então veio o cumprimentar por ter ganho o desafio, e então ele perdeu a bela moça de\n'
+                    'vista.... ', 0.05)
+                txt('Um tempo depois ao andar sobre os arredores de seus aposentos ele se esbarrou em algo ou melhor alguém,\n'
+                    ' a bela moça que tinha ganho o desafio junto dele.', 0.05)
 
+                if escolhas[1] == 2:
+                    txt('Ele então se levantou escolhendo não pegar a chave mas pegou a túnica que cobria sua mãe e ouvi\n'
+                        'passos e entrou de volta a igreja,', 0.05)
+                    txt('acha que seu pai pudesse está lá dentro, ao entrar e se deparar percebeu que era uma enrascada da\n'
+                        'igreja, ', 0.05)
+                    txt(f'o capturaram e o mataram tomando então todo seu poder, e tudo que um dia a mãe de {nome_do_jogador}\n'
+                        'quis proteger ali mesmo se desfez. ', 0.05)
+                # morreu
 
-txt("Equipe:\n"
+txt(f"{'-' * 60}"
+    "Equipe:\n"
     "Jefferson Mangueira Izaquiel;\n"
     "Josias Carneiro;\n"
-    "Lorena Vitória.", 0.2)
+    "Lorena Vitória."
+    f"{'-' * 60}", 0.2)
 
 txt(f"Sequências de escolhas que você fez: {escolhas}.", 0.22)
 
