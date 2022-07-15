@@ -35,10 +35,15 @@ def ver(opcao, opcoes_escolhas):
 
 
 class Batalha:
-    def combate(inimigo_atb, inimigo_nome, final):
+    def __init__(self, inimigo_atb, inimigo_nome, final):
+        self.inimigo_atb = inimigo_atb
+        self.inimigo_nome = inimigo_nome
+        self.final = final
+
+    def combate(self, inimigo_atb, inimigo_nome, final):
         contelfa = 0
         atributosbatalha = class_e_atributos[1][:]
-        while inimigo_atb[0] > 0 and atributosbatalha[0] > 0:
+        while self.inimigo_atb[0] > 0 and atributosbatalha[0] > 0:
             print('-' * 40)
             print(f'[HP: {atributosbatalha[0]}]{f"[HP.I: {inimigo_atb[0]}]":>32}')
             print(f'[MANA: {atributosbatalha[2]}]')
@@ -47,7 +52,7 @@ class Batalha:
     
         3-> Itens       4-> Pular rodada
     {'-' * 40}
-    Escolha o que você vai fazer: '''))
+    Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
 
             while opcoes > 4 or opcoes < 0:
                 print('-' * 40)
@@ -461,7 +466,6 @@ class Batalha:
                 print(f'Seus atributos ficaram assim: {class_e_atributos[1]}')
         if atributosbatalha[0] <= 0:
             print('\033[1;40;31mQue pena, você perdeu.\033[m')
-
 
 # pygame.init()
 
