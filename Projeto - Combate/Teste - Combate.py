@@ -537,8 +537,8 @@ Escolha um de seus itens: '''))
             opcoes = int(input(f'''{'-' * 60}
             \033[0;32mParabéns você derrotou {inimigo_nome}!\033[m
             1-> Vida     2-> Ataque     3-> Mana
-    {'-' * 60}
-    Escolha um dos atributos para aumentar 2 pontos: '''))
+{'-' * 60}
+Escolha um dos atributos para aumentar 2 pontos: '''))
             time.sleep(1)
             if opcoes == 1:
                 class_e_atributos[1][0] += 2
