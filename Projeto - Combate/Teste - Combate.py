@@ -46,8 +46,8 @@ class Batalha:
         1-> Ataque      2-> Especial      
     
         3-> Itens       4-> Pular rodada
-    {'-' * 40}
-    Escolha o que você vai fazer: '''))
+{'-' * 40}
+Escolha o que você vai fazer: '''))
 
             while opcoes > 4 or opcoes < 0:
                 print('-' * 40)
@@ -57,8 +57,8 @@ class Batalha:
         1-> Ataque      2-> Especial      
     
         3-> Itens       4-> Pular rodada
-    {'-' * 40}
-    Escolha o que você vai fazer: '''))
+{'-' * 40}
+Escolha o que você vai fazer: '''))
 
             if opcoes == 1:
                 controle = int(input('Se você quiser jogar o dado para atacar digite (1), se quiser voltar digite (2): '))
@@ -235,6 +235,96 @@ class Batalha:
                             print(f'Mascariane recebeu {200 * 1.00} de dano!!!')
                             inimigo_atb[0] -= 200 * 1.00
 
+                    elif final == 'onmagoelfa':
+                        dado = random.randint(1, 6)
+                        print('A elfa e o Yati atacaram!!')
+                        print(f'Tiraram o número {dado}')
+                        time.sleep(1)
+                        if dado == 1:
+                            print(f'Eles erraram o golpe!')
+                        elif dado == 2:
+                            print(f'Mascariane recebeu {200 * 0.20} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.20
+                        elif dado == 3:
+                            print(f'Mascariane {200 * 0.40} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.40
+                        elif dado == 4:
+                            print(f'Mascariane {200 * 0.60} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.60
+                        elif dado == 5:
+                            print(f'Mascariane {200 * 0.80} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.80
+                        elif dado == 6:
+                            print(f'Mascariane recebeu {200 * 1.00} de dano!!!')
+                            inimigo_atb[0] -= 200 * 1.00
+
+                        dado = random.randint(1, 6)
+                        print('O mago atacou!!')
+                        print(f'Tirou o número {dado}')
+                        time.sleep(1)
+                        if dado == 1:
+                            print(f'Ele errou o golpe!')
+                        elif dado == 2:
+                            print(f'Mascariane recebeu {200 * 0.20} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.20
+                        elif dado == 3:
+                            print(f'Mascariane {200 * 0.40} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.40
+                        elif dado == 4:
+                            print(f'Mascariane {200 * 0.60} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.60
+                        elif dado == 5:
+                            print(f'Mascariane {200 * 0.80} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.80
+                        elif dado == 6:
+                            print(f'Mascariane recebeu {200 * 1.00} de dano!!!')
+                            inimigo_atb[0] -= 200 * 1.00
+
+                    elif final == 'onmagoguerreiro':
+                        dado = random.randint(1, 6)
+                        print('O guerreiro atacou!!')
+                        print(f'Tirou o número {dado}')
+                        time.sleep(1)
+                        if dado == 1:
+                            print(f'Ele errou o golpe!')
+                        elif dado == 2:
+                            print(f'Mascariane recebeu {200 * 0.20} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.20
+                        elif dado == 3:
+                            print(f'Mascariane {200 * 0.40} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.40
+                        elif dado == 4:
+                            print(f'Mascariane {200 * 0.60} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.60
+                        elif dado == 5:
+                            print(f'Mascariane {200 * 0.80} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.80
+                        elif dado == 6:
+                            print(f'Mascariane recebeu {200 * 1.00} de dano!!!')
+                            inimigo_atb[0] -= 200 * 1.00
+
+                        dado = random.randint(1, 6)
+                        print('O mago atacou!!')
+                        print(f'Tirou o número {dado}')
+                        time.sleep(1)
+                        if dado == 1:
+                            print(f'Ele errou o golpe!')
+                        elif dado == 2:
+                            print(f'Mascariane recebeu {200 * 0.20} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.20
+                        elif dado == 3:
+                            print(f'Mascariane {200 * 0.40} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.40
+                        elif dado == 4:
+                            print(f'Mascariane {200 * 0.60} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.60
+                        elif dado == 5:
+                            print(f'Mascariane {200 * 0.80} de dano!!!')
+                            inimigo_atb[0] -= 200 * 0.80
+                        elif dado == 6:
+                            print(f'Mascariane recebeu {200 * 1.00} de dano!!!')
+                            inimigo_atb[0] -= 200 * 1.00
+
                 elif controle == 2:
                     continue
 
@@ -242,8 +332,8 @@ class Batalha:
                 if class_e_atributos[0] == 'Mago':
                     opcoesesp = int(input(f'''{'-' * 40}
             1-> Cura      N-> Voltar
-    {'-' * 40}
-    Escolha um especial ou clique em outro qualquer número para voltar: '''))
+{'-' * 40}
+Escolha um especial ou clique em outro qualquer número para voltar: '''))
                     if opcoesesp == 1:
                         if atributosbatalha[2] >= 60 and atributosbatalha[0] < class_e_atributos[1][0]:
                             atributosbatalha[2] -= 60
@@ -262,8 +352,8 @@ class Batalha:
                 elif class_e_atributos[0] == 'Guerreiro':
                     opcoesesp = int(input(f'''{'-' * 40}
         1-> Fúria      N-> Voltar
-    {'-' * 40}
-    Escolha um especial ou clique em outro qualquer número para voltar: '''))
+{'-' * 40}
+Escolha um especial ou clique em outro qualquer número para voltar: '''))
                     if opcoesesp == 1:
                         if atributosbatalha[2] >= 80:
                             atributosbatalha[2] -= 80
@@ -277,8 +367,8 @@ class Batalha:
                 elif class_e_atributos[0] == 'Elfo':
                     opcoesesp = int(input(f'''{'-' * 40}
         1-> Agilidade      N-> Voltar
-    {'-' * 40}
-    Escolha um especial ou clique em outro qualquer número para voltar: '''))
+{'-' * 40}
+Escolha um especial ou clique em outro qualquer número para voltar: '''))
                     if opcoesesp == 1:
                         if atributosbatalha[2] >= 50 and contelfa <= 4:
                             atributosbatalha[2] -= 50
@@ -325,8 +415,8 @@ class Batalha:
             3-> Poção de mana M     4-> Poção de mana G     
             
                             5-> Voltar 
-    {'-' * 59}
-    Escolha um de seus itens: '''))
+{'-' * 59}
+Escolha um de seus itens: '''))
                 while opcoesitens > 5 or opcoesitens < 0:
                     opcoesitens = int(input(f'''{'-' * 59}
             1-> Poção de cura M     2-> Poção de cura G     
@@ -334,8 +424,8 @@ class Batalha:
             3-> Poção de mana M     4-> Poção de mana G     
             
                         5-> Voltar 
-    {'-' * 59}
-    Escolha um de seus itens: '''))
+{'-' * 59}
+Escolha um de seus itens: '''))
                 if opcoesitens == 1:
                     if itens[1][0] > 0:
                         if atributosbatalha[0] == class_e_atributos[1][0]:
