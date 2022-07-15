@@ -1,3 +1,5 @@
+import pygame
+
 '''itens = [['Poção Pequena', 'Poção Média', 'Poção Grande'],
          [4, 5, 6]]
 
@@ -194,5 +196,11 @@ def txt(texto, tempo):
 
 
 txt("Um tempo considerável", 0.06)'''
+
+
+pygame.init()
+pygame.mixer.music.load("Musiquinha de mascariane.mp3")
+pygame.mixer.music.play(-1)
+pygame.event.wait()
 
 

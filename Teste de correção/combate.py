@@ -44,7 +44,7 @@ class Batalha:
             print(f'[MANA: {atributosbatalha[2]}]')
             opcoes = ver(input(f'''{'-' * 40}
         1-> Ataque      2-> Especial      
-
+    
         3-> Itens       4-> Pular rodada
 {'-' * 40}
 Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
@@ -55,15 +55,13 @@ Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
                 print(f'[MANA: {atributosbatalha[2]}]')
                 opcoes = ver(input(f'''{'-' * 40}
         1-> Ataque      2-> Especial      
-
+    
         3-> Itens       4-> Pular rodada
     {'-' * 40}
     Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
 
             if opcoes == 1:
-                controle = ver(
-                    input('Se você quiser jogar o dado para atacar digite (1), se quiser voltar digite (2): '),
-                    ["1", "2"])
+                controle = ver(input('Se você quiser jogar o dado para atacar digite (1), se quiser voltar digite (2): '), ["1", "2"])
                 while 1 != controle != 2:
                     controle = ver(input("Para jogar o dado digite (1), para voltar digite (2): "), ["1", "2"])
                 if controle == 1:
@@ -323,18 +321,18 @@ Escolha o que você vai fazer: '''), ["1", "2", "3", "4"])
                     print()
                 opcoesitens = ver(input(f'''{'-' * 59}
             1-> Poção de cura M     2-> Poção de cura G     
-
+            
             3-> Poção de mana M     4-> Poção de mana G     
-
+            
                             5-> Voltar 
 {'-' * 59}
     Escolha um de seus itens: '''), ["1", "2", "3", "4", "5"])
                 while opcoesitens > 5 or opcoesitens < 0:
                     opcoesitens = ver(input(f'''{'-' * 59}
             1-> Poção de cura M     2-> Poção de cura G     
-
+            
             3-> Poção de mana M     4-> Poção de mana G     
-
+            
                          5-> Voltar 
     {'-' * 59}
     Escolha um de seus itens: '''), ["1", "2", "3", "4", "5"])
