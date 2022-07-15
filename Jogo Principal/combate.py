@@ -35,7 +35,7 @@ def ver(opcao, opcoes_escolhas):
 
 
 class Batalha:
-    def combate(self, inimigo_atb, inimigo_nome, final):
+    def combate(inimigo_atb, inimigo_nome, final):
         contelfa = 0
         atributosbatalha = class_e_atributos[1][:]
         while inimigo_atb[0] > 0 and atributosbatalha[0] > 0:

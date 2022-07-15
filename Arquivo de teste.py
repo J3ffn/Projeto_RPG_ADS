@@ -6,7 +6,6 @@ if itens[1][0] > 0:
 else:
     print("Não é maior.")'''
 
-
 '''texto = f"""SOIDJAODIAJSOIJASDIAJS
 poiasjdpiodsajdpasoj 
 KdACBasadkopACS 
@@ -154,11 +153,46 @@ txt("Equipe: Jefferson Mangueira Izaquiel Josias Carneiro", 0.2)
        f"{'Ass. Bispo Melo':>40}\n"
        f"{'-'* 40}")'''
 
-
-class_e_atributos = [input("Número: ")]
-while class_e_atributos[0].isnumeric is False:
+'''escolhas = []
+escolhas.append(input("Escolhas: "))
+opcoes = ["1", "2", "3", "4"]
+while escolhas[-1].isnumeric is not True or escolhas[-1].isnumeric:
     try:
-        if 2 = class_e_atributos[0] == 1:
-            
+        if int(escolhas[-1]):
+            if escolhas[-1] in opcoes:
+                c = int(escolhas[-1])
+                escolhas.pop()
+                escolhas.append(c)
+                break
 
-    except:
+            if int(escolhas[-1]) <= 0:
+                escolhas[-1] += 2
+
+            else:
+                escolhas[-1] += 2
+
+
+    except ValueError:
+        escolhas.pop()
+        print("Escolha uma opção válida!")
+        escolhas.append(input("Escolha: "))
+
+    except TypeError:
+        escolhas.pop()
+        print("Escolha uma opção válida!")
+        escolhas.append(input("Escolha: "))
+
+print("Terminou o laço e continuou")'''
+
+'''import time
+
+
+def txt(texto, tempo):
+    for i in texto:
+        print(i, end="")
+        time.sleep(tempo)
+
+
+txt("Um tempo considerável", 0.06)'''
+
+
